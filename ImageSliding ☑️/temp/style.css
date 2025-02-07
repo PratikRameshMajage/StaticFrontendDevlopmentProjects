@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#img {
+    height: 80%;
+    width: 90%;
+    background-size: cover;
+    background-position: center;
+    
+    animation: slideImages 12s infinite; /* Total duration (3s per image * 4 images) */
+}
+
+@keyframes slideImages {
+    0%, 25% {
+        background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop");
+    }
+    25%, 50% {
+        background-image: url("https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=2070&auto=format&fit=crop");
+    }
+    50%, 75% {
+        background-image: url("https://images.unsplash.com/photo-1521747116042-5a810fda9664?q=80&w=2070&auto=format&fit=crop");
+    }
+    75%, 100% {
+        background-image: url("https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2070&auto=format&fit=crop");
+    }
+}
