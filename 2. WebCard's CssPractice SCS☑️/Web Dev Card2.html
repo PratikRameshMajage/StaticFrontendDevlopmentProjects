@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png" type="icon">
+    <title>Web Dev Card_2</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            width: 400px;
+            height: 600px;
+            background-color: white;
+            border-radius: 20px;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card img{
+            width: 100%;
+            height: 30%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        .textBox{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 70%;
+            margin: 20px;
+        }
+        #amountBox{
+            width: 80%;
+            height: 10%;
+            background-color: #FFCC70;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+            .leftBox{ 
+            height: 100%;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        #payementButton{
+            width: 80%;
+            height: 9%;
+            background-color: rgb(30, 75, 199);
+            color: whitesmoke;
+            border-radius: 10px;
+            margin: 20px;
+        } 
+        .imgBox img{
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+        .cancelBox{
+            margin: 10px;
+        }
+        .cancelBox a{
+            text-decoration: none;
+            color: rgb(33, 32, 32);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="images/wallpaper.jpg" alt="robert pattinson">
+            <div class="textBox">
+                <h2>Order Summary</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dolorem perferendis rem eveniet eius minus voluptatem. Itaque est ratione corporis? <a href="Web Dev Card1.html">Card1</a></p>
+            </div>
+            <div id="amountBox">
+                <div class="leftBox">
+                    <div class="imgBox">
+                        <img src="logo.png" alt="logo" width="10">
+                    </div>
+                    <div id="textAmountBox">
+                        <p>Amount</p>
+                        <p>$99.9/year</p>
+                    </div>
+                </div>
+                <div class="rightBox">
+                    <a href="#">Change</a>
+                </div>
+            </div>
+            <button id="payementButton">
+                Proceed to Button
+            </button>
+            <div class="cancelBox">
+                <a href="#"> Cncel Order</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

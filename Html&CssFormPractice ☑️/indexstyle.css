@@ -1,0 +1,71 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+}
+
+/* Header Styles */
+header {
+  background-color: orange;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content Styles */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+section {
+  flex-basis: 60%;
+  margin-right: 20px;
+}
+
+article {
+  flex-basis: 30%;
+}
+
+aside {
+  flex-basis: 30%;
+}
+
+/* Footer Styles */
+footer {
+  background-color: orange;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}

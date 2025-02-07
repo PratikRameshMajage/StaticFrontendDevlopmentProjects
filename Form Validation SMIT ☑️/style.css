@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+form{
+    width: 40%;
+    padding: 5%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+}
+input{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    width: 90%;
+}
+.error{
+    color: red;
+}

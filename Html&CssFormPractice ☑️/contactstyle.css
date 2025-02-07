@@ -1,0 +1,28 @@
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  h1, h2, h3 {
+    color: #333;
+  }
+  
+  a {
+    color: #06c;
+
+}header{
+    background-color: orange;
+    padding: 1em;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 1em;
+  }

@@ -1,0 +1,53 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  h1, h2, h3 {
+    color: #333;
+  }
+  
+  a {
+    color: #06c;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #FFA500;    
+    padding: 1em;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 1em;
+  }
+  
+  /* Main styles */
+  main {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+  }
+  
+  section {
+    width: 65%;
+  }
+  
+  aside {
+    width: 30%;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #eee;
+    padding: 1em;
+    text-align: center;
+  }
+  

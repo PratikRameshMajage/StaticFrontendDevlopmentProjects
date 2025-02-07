@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERN STACK WEB DEVLOPMENT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png" type="icon">
+</head>
+<body>
+    
+    <!-- <div>
+        <h1>PRATIK MAJAGE</h1>
+        <h2>PRATIK MAJAGE</h2>
+        <h3>PRATIK MAJAGE</h3>
+        <h4>PRATIK MAJAGE</h4>
+        <h5>PRATIK MAJAGE</h5>
+        <h6>PRATIK MAJAGE</h6>
+        <h7>PRATIK MAJAGE</h7>
+        <h8>PRATIK MAJAGE</h8>
+        <h9>PRATIK MAJAGE</h9>
+        <h10>PRATIK MAJAGE = Behaves like a paragraph</h10>
+        <br><hr>
+        <a href="https://www.google.com/"> GOOGLE </a>
+        <br><br><hr><br>
+        <ul>
+            <li>Maggi</li>
+            <li>Kurkure</li>
+            <li>lays</li>
+        </ul>
+        <hr>
+        <ol>
+            <li>chai</li>
+            <li>coffe</li>
+            <li>bhajiya</li>
+        </ol>
+        <hr>
+        <table>        <!-- table>(tr>td*3)*3 -->
+            <!-- <tr>
+               <td>Sr. No</td> 
+               <td>Name</td>
+               <td>Login</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+        </table>
+        <hr>
+        <img src="data:image/jpeg;base64,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" alt="Robert Pattinson & Kristen Stewart">
+        <hr>
+        <b>Lorem</b> <i>ipsum</i> <strong>dolor</strong> <em>sit amet</em>  <pre>consectetur 
+            adipisicing 
+            elit. </pre> <sup>2</sup> <sub>$</sub><s>Fugit, ipsum?</s> 
+    </div> --> 
+    <!-- <div>
+        <table border="1">
+            <tr>
+                <th>Student Id</th>
+                <th>Student Name</th>
+                <th>Student Gender</th>
+                <th>Student Age</th>
+            </tr>
+            <tr>
+                <th>1234</th>
+                <th>Pratik</th>
+                <th>Male</th>
+                <th>21</th>
+            </tr>
+            <tr>
+                <th>1234</th>
+                <th>Pratik</th>
+                <th>Male</th>
+                <th>21</th>
+            </tr>
+            <tr>
+                <th>1234</th>
+                <th>Pratik</th>
+                <th>Male</th>
+                <th>21</th>
+            </tr>
+            <tr>
+                <th>1234</th>
+                <th>Pratik</th>
+                <th>Male</th>
+                <th>21</th>
+            </tr>
+        </table> -->
+
+        <!-- table>(tr>th*4)+(tr>td*3)*4 -->
+        <!-- <table border="1">       
+            <tr>
+                <th>Student Id</th>
+                <th>Student Name</th>
+                <th>Student Gender</th>
+                <th>Student Age</th>
+            </tr>
+            <tr>
+                <td>1234</td>
+                <td colspan="3">Patik</td>
+                <!-- <td>Male</td>
+                <td>21</td> -->
+            <!-- </tr>
+            <tr>
+                <td>1234</td>
+                <td>Patik</td>
+                <td>Male</td>
+                <td rowspan="3">21</td>
+            </tr>
+            <tr>
+                <td>1234</td>
+                <td>Patik</td>
+                <td>Male</td>
+                <!-- <td>21</td> -->
+            <!-- </tr>
+            <tr>
+                <td>1234</td>
+                <td>Patik</td>
+                <td>Male</td>
+                <!-- <td>21</td> -->
+            <!-- </tr>
+        </table>  -->
+    <!-- </div> -->
+     <!-- table>(tr>th*4)+(tr>td*3)*4 -->
+     <h1>Rows & Columns</h1>
+    <table border="1">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Row 1 Cell 1</td>
+            <td>Row 1 Cell 2</td>
+            <td>Row 1 Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 1 Cell 2</td>
+            <td>Row 1 Cell 3</td>
+        </tr>
+        <tr>
+            <td colspan="3">Row 3 Cell 1</td>
+        </tr>
+    </table>
+    <hr>
+    <h1>Company Founders</h1>
+    <table border="1">
+        <thead>
+            <th>No.</th>
+            <th>Full Name</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Type</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Bill Gate</td>
+                <td>Founder Microsoft</td>
+                <td>$1200</td>
+                <td rowspan="4">Company Founder</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Steve Jobs</td>
+                <td>Apple Founder</td>
+                <td>$1200</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Larry Page</td>
+                <td>Google Founder</td>
+                <td>$1100</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Mark Zukerberg</td>
+                <td>Founder Facebook</td>
+                <td>$1300</td>
+            </tr>
+            <tr>
+                <td colspan="3">Total Expence</td>
+                <td>$4800</td>
+            </tr>
+        </tbody>
+        <tfoot></tfoot>
+    </table>
+    <hr>
+    <h1>MAale & Fimale Distribution</h1>
+    <table border="1">
+        <thead>
+            <th>Country</th>
+            <th>State</th>
+            <th>City</th>
+            <th>Sreet</th>
+            <th>Male</th>
+            <th>Fimale</th>
+            <th>Others</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="8">1</td>
+                <td rowspan="4">Kerala</td>
+                <td rowspan="2">Kochin</td>
+                <td>New Street</td>
+                <td>500</td>
+                <td>600</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Main Street</td>
+                <td>300</td>
+                <td>288</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Trivandrum</td>
+                <td>Guru Street</td>
+                <td>500</td>
+                <td>600</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>TVK Street</td>
+                <td>500</td>
+                <td>600</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td rowspan="4">Maharashtra</td>
+                <td rowspan="2">Mumbai</td>
+                <td>Krisha Street</td>
+                <td>700</td>
+                <td>850</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Main Street</td>
+                <td>500</td>
+                <td>600</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Surat</td>
+                <td>New Street</td>
+                <td>500</td>
+                <td>600</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Bila Street</td>
+                <td>500</td>
+                <td>600</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td rowspan="2">2</td>
+                <td rowspan="2">Alska</td>
+                <td rowspan="2">AKA Central</td>
+                <td>New Street</td>
+                <td>200</td>
+                <td>210</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Cross Street</td>
+                <td>1000</td>
+                <td>1050</td>
+                <td>10</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h1>Collage Timetable</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th rowspan="3">Day</th>
+                <th colspan="3">Seminar</th>
+            </tr>
+            <tr>
+                <th colspan="2">Shedule</th>
+                <th rowspan="2">Topic</th>
+            </tr>
+            <tr>
+                <th>Begin</th>
+                <th>End</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Monday</td>
+                <td rowspan="2">8:00 am</td>
+                <td rowspan="2">5:00 pm</td>
+                <td>Introduction to XML</td>
+            </tr>
+            <tr>
+                <td>Validity. DTD & Relax NG</td>
+            </tr>
+            <tr>
+                <td rowspan="3">Tuesday</td>
+                <td>8:00 am</td>
+                <td>11:00 am</td>
+                <td rowspan="3">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>X Path</td>
+                            </tr>
+                            <tr>
+                                <td>XLS Transformation</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>11:00 am</td>
+                <td>12:00 pm</td>
+            </tr>
+            <tr>
+                <td>2:00 pm</td>
+                <td>5:00 pm</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>8:00 am</td>
+                <td>12:00 pm</td>
+                <td>XSL Formatting Objects</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <footer>
+        <a href="2_Media.html">Media </a>
+        <a href="3_form.html">Form </a>
+    </footer>
+    <hr>
+</body>
+</html>
