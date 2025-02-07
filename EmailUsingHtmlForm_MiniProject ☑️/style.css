@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://images.unsplash.com/photo-1735752430707-28b5048814e7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-size: cover;
+}
+label{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 5px;
+}
+input, textarea{
+    margin-bottom: 18px;
+    padding: 4px;
+    display: block;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-size: 15px;
+    font-weight: 700;
+    width: 230px;
+}
+#password{
+    margin-bottom: 10px;
+}
+#submit{
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+    background-color: black;
+    color: white;
+}
