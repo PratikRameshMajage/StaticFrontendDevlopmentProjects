@@ -371,3 +371,284 @@ try {
 ✔ **Safer than `eval()`**, reducing security vulnerabilities.  
 
 You can enhance this further with **operator validation** or **keyboard support**? 🚀
+
+Explain what is onclick="" in js? 'onclick="clearDisplay()">C'
+
+### Understanding `onclick=""` in JavaScript
+
+The `onclick=""` attribute in JavaScript is an **inline event handler** used in HTML to execute JavaScript code when an element (usually a button) is clicked.
+
+#### Breaking Down `onclick="clearDisplay()">C`
+```html
+<button onclick="clearDisplay()">C</button>
+```
+1. **`onclick` Attribute:** Specifies the JavaScript function that will run when the button is clicked.
+2. **`clearDisplay()` Function:** A function (likely defined in a separate JavaScript file or script tag) that gets executed when the button is clicked.
+3. **`>` Closing Tag:** Ends the `<button>` element.
+4. **`C` Text Content:** The text displayed inside the button.
+
+### Example Usage
+
+#### HTML + JavaScript:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>OnClick Example</title>
+    <script>
+        function clearDisplay() {
+            document.getElementById("output").value = "";
+        }
+    </script>
+</head>
+<body>
+
+    <input type="text" id="output" value="12345">
+    <button onclick="clearDisplay()">C</button>
+
+</body>
+</html>
+```
+### Explanation:
+- Clicking the **"C"** button calls the `clearDisplay()` function.
+- The function sets the value of the input field with `id="output"` to an empty string (`""`), effectively clearing it.
+
+#### Alternative:
+Instead of using `onclick=""` inline, you can use JavaScript event listeners for better code organization:
+
+```javascript
+document.getElementById("clearBtn").addEventListener("click", clearDisplay);
+
+function clearDisplay() {
+    document.getElementById("output").value = "";
+}
+```
+```html
+<button id="clearBtn">C</button>
+```
+
+### Key Takeaways:
+- `onclick=""` is an **inline event handler** in JavaScript.
+- It executes a function or JavaScript code when the element is clicked.
+- Inline event handlers are simple but **not recommended** for large projects due to maintainability issues. Instead, use `addEventListener()` for better code separation.
+
+### **Inline Event Handlers in JavaScript**
+JavaScript provides several **inline event handlers** that can be used directly in HTML elements. These event handlers cover user interactions like clicks, key presses, mouse movements, and form submissions.
+
+#### **Common Inline Event Handlers**
+Here are the most frequently used inline event handlers in JavaScript:
+
+### **1. Mouse Events**
+| Event Handler | Description |
+|--------------|------------|
+| `onclick` | Fires when the element is clicked |
+| `ondblclick` | Fires when the element is double-clicked |
+| `onmousedown` | Fires when the mouse button is pressed down |
+| `onmouseup` | Fires when the mouse button is released |
+| `onmousemove` | Fires when the mouse moves over the element |
+| `onmouseover` | Fires when the mouse enters the element |
+| `onmouseout` | Fires when the mouse leaves the element |
+| `onmouseenter` | Fires when the mouse enters an element (does not bubble) |
+| `onmouseleave` | Fires when the mouse leaves an element (does not bubble) |
+
+---
+
+### **2. Keyboard Events**
+| Event Handler | Description |
+|--------------|------------|
+| `onkeydown` | Fires when a key is pressed down |
+| `onkeyup` | Fires when a key is released |
+| `onkeypress` | Fires when a key is pressed (deprecated) |
+
+---
+
+### **3. Form Events**
+| Event Handler | Description |
+|--------------|------------|
+| `onfocus` | Fires when an element gains focus |
+| `onblur` | Fires when an element loses focus |
+| `onchange` | Fires when the value of an input element changes |
+| `oninput` | Fires when the user inputs something into a field |
+| `onsubmit` | Fires when a form is submitted |
+| `onreset` | Fires when a form is reset |
+| `onselect` | Fires when text inside an input or textarea is selected |
+
+---
+
+### **4. Window & Document Events**
+| Event Handler | Description |
+|--------------|------------|
+| `onload` | Fires when the page has loaded |
+| `onunload` | Fires when the page is unloaded |
+| `onresize` | Fires when the window is resized |
+| `onscroll` | Fires when the user scrolls the page |
+
+---
+
+### **5. Drag & Drop Events**
+| Event Handler | Description |
+|--------------|------------|
+| `ondrag` | Fires when an element is being dragged |
+| `ondrop` | Fires when a dragged element is dropped |
+| `ondragover` | Fires when a draggable element is dragged over a valid drop target |
+| `ondragstart` | Fires when dragging starts |
+
+---
+
+### **6. Clipboard Events**
+| Event Handler | Description |
+|--------------|------------|
+| `oncopy` | Fires when the user copies content |
+| `oncut` | Fires when the user cuts content |
+| `onpaste` | Fires when the user pastes content |
+
+---
+
+### **Total Number of Inline Event Handlers**
+There are around **50+ inline event handlers** in JavaScript, covering different types of user interactions.
+
+### **Example of Inline Event Handler Usage**
+```html
+<button onclick="alert('Button clicked!')">Click Me</button>
+```
+However, for better maintainability, it's recommended to use **JavaScript event listeners** instead of inline handlers.
+
+### **Complete List of Inline Event Handlers in JavaScript**  
+JavaScript provides **50+ inline event handlers** categorized into different types based on user interactions.
+
+---
+
+## **1. Mouse Events 🖱️**
+| Event Handler | Description |
+|--------------|------------|
+| `onclick` | Fires when the element is clicked |
+| `ondblclick` | Fires when the element is double-clicked |
+| `onmousedown` | Fires when the mouse button is pressed down |
+| `onmouseup` | Fires when the mouse button is released |
+| `onmousemove` | Fires when the mouse moves over the element |
+| `onmouseover` | Fires when the mouse enters the element |
+| `onmouseout` | Fires when the mouse leaves the element |
+| `onmouseenter` | Fires when the mouse enters an element (does not bubble) |
+| `onmouseleave` | Fires when the mouse leaves an element (does not bubble) |
+| `onwheel` | Fires when the mouse wheel is used |
+
+---
+
+## **2. Keyboard Events ⌨️**
+| Event Handler | Description |
+|--------------|------------|
+| `onkeydown` | Fires when a key is pressed down |
+| `onkeyup` | Fires when a key is released |
+| `onkeypress` | Fires when a key is pressed (deprecated, use `onkeydown`) |
+
+---
+
+## **3. Form Events 📄**
+| Event Handler | Description |
+|--------------|------------|
+| `onfocus` | Fires when an element gains focus |
+| `onblur` | Fires when an element loses focus |
+| `onchange` | Fires when the value of an input element changes |
+| `oninput` | Fires when the user inputs something into a field |
+| `onsubmit` | Fires when a form is submitted |
+| `onreset` | Fires when a form is reset |
+| `onselect` | Fires when text inside an input or textarea is selected |
+
+---
+
+## **4. Window & Document Events 🌐**
+| Event Handler | Description |
+|--------------|------------|
+| `onload` | Fires when the page has fully loaded |
+| `onunload` | Fires when the page is unloaded |
+| `onresize` | Fires when the window is resized |
+| `onscroll` | Fires when the user scrolls the page |
+| `onerror` | Fires when an error occurs while loading a document or image |
+| `onbeforeunload` | Fires before the user leaves the page (for warnings) |
+
+---
+
+## **5. Drag & Drop Events 🏗️**
+| Event Handler | Description |
+|--------------|------------|
+| `ondrag` | Fires when an element is being dragged |
+| `ondrop` | Fires when a dragged element is dropped |
+| `ondragover` | Fires when a draggable element is dragged over a valid drop target |
+| `ondragstart` | Fires when dragging starts |
+| `ondragenter` | Fires when a draggable element enters a drop target |
+| `ondragleave` | Fires when a draggable element leaves a drop target |
+| `ondragend` | Fires when the user stops dragging an element |
+
+---
+
+## **6. Clipboard Events 📋**
+| Event Handler | Description |
+|--------------|------------|
+| `oncopy` | Fires when the user copies content |
+| `oncut` | Fires when the user cuts content |
+| `onpaste` | Fires when the user pastes content |
+
+---
+
+## **7. Media Events 🎥**
+| Event Handler | Description |
+|--------------|------------|
+| `onplay` | Fires when a media file (audio/video) starts playing |
+| `onpause` | Fires when media playback is paused |
+| `onended` | Fires when media playback ends |
+| `onvolumechange` | Fires when the volume is changed |
+| `onwaiting` | Fires when the media is buffering |
+
+---
+
+## **8. Touch Events (Mobile) 📱**
+| Event Handler | Description |
+|--------------|------------|
+| `ontouchstart` | Fires when a touch point is placed on the touch screen |
+| `ontouchmove` | Fires when a touch point moves across the screen |
+| `ontouchend` | Fires when a touch point is removed from the screen |
+| `ontouchcancel` | Fires when the touch action is disrupted (e.g., an alert appears) |
+
+---
+
+## **9. Focus Events 🔍**
+| Event Handler | Description |
+|--------------|------------|
+| `onfocus` | Fires when an element gets focus |
+| `onblur` | Fires when an element loses focus |
+| `onfocusin` | Fires when an element is about to receive focus (bubbles) |
+| `onfocusout` | Fires when an element is about to lose focus (bubbles) |
+
+---
+
+## **10. Miscellaneous Events 💡**
+| Event Handler | Description |
+|--------------|------------|
+| `oncontextmenu` | Fires when the right-click menu is opened |
+| `ontransitionend` | Fires when a CSS transition ends |
+| `onanimationstart` | Fires when a CSS animation starts |
+| `onanimationend` | Fires when a CSS animation ends |
+| `onanimationiteration` | Fires when a CSS animation repeats |
+
+---
+
+### **Total Inline Event Handlers: 50+**
+This list covers almost all JavaScript event handlers that can be used inline.
+
+### **Example of Using Inline Event Handlers:**
+```html
+<button onclick="alert('Hello, World!')">Click Me</button>
+<input type="text" oninput="console.log(this.value)">
+```
+#### **⚠️ Best Practice: Avoid Inline Handlers!**
+Using `addEventListener()` in JavaScript is **better** than using inline event handlers because:
+1. It keeps HTML clean.
+2. It allows multiple event listeners on the same element.
+3. It improves maintainability and debugging.
+
+### **Example of `addEventListener()` (Recommended Approach)**
+```javascript
+document.getElementById("myButton").addEventListener("click", function() {
+    alert("Button clicked!");
+});
+```
