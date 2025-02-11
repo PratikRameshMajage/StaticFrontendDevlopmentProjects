@@ -183,21 +183,77 @@ obj = {
 for(let key in obj){
     console.log(key)
 }
+console.log("-------------------------------------")
 
 
 // Array:
 // 31. Create an array of your top 5  favourite movies and log it.
-// 32. Find and log the second element of an array.
-// 33. Add new Elements to the start of an array using .unshift().
-// 34. Remove the last element of an  array and log the updated array.
-// 35. Use .slice() to extract the first three elements of an array.
-// 36. Find index of specific elements in an array using .indexOf().
-// 37. Check if a value exists in an array using .includes().
-// 38. Combines two arrays [1,2] and [3,4] using .concat().
-// 39. Sort an array of numbers [5,2,9,1] in acending order.
-// 40. Write a program that creates a copy of an array without mutating the original.
+var arr2 = ["Hero", "Zero", "G-one", "R-one"]
+arr2.forEach(function(value){
+    console.log(value)
+})
 
-// Finctions
+// 32. Find and log the second element of an array.
+var arr3 = [1,2,3,4,5]
+console.log(arr3[1])
+console.log(arr3)
+
+// 33. Add new Elements to the start of an array using .unshift().
+arr3.unshift(0)
+arr3.unshift(-1)
+console.log(arr3)
+
+// 34. Remove the last element of an  array and log the updated array.
+arr3.pop()
+console.log(arr3)
+
+// 35. Use .slice() to extract the first three elements of an array.
+console.log(arr3.slice(1,3))
+
+// 36. Find index of specific elements in an array using .indexOf().
+console.log(arr3.indexOf(3))
+
+// 37. Check if a value exists in an array using .includes().
+console.log(arr3.includes(5))
+
+// 38. Combines two arrays [1,2] and [3,4] using .concat().
+var arr4 = [1,2,3,4]
+var arr5 = [5,6,7,8]
+console.log(arr4.concat(arr5))
+
+// 39. Sort an array of numbers [5,2,9,1] in acending order.
+var aa1 = [11,24,36,4,5]
+// Bubble Sort
+for(var j = 0; j < aa1.length - 1; j++){
+    for(var i = 0; i < aa1.length - j - 1; i++){
+        if(aa1[i] > aa1[i+1]){
+            var temp = aa1[i]
+            aa1[i] = aa1[i+1]
+            aa1[i+1] = temp  
+        }
+    }
+}
+console.log(aa1)
+
+// 40. Write a program that creates a copy of an array without mutating the original.
+// Technique:1 - Spread Operator.
+var a1 = [1,2,3,4,5]
+var a2 = [...a1]
+console.log(a2)
+
+// Mutation means this:
+a1 = a2
+
+// Technique:2
+var a3 = []
+a1.forEach(function(value){
+    a3.push(value)
+})
+console.log("arr2 is:",a2)
+
+
+
+// Function
 // 41. Write a function to cheack if a number is even or odd.
 // 42. Create a function to calculate the area of a circle with a given radius.
 // 43. Write a function that accepts an array and returns the sum of it's element.
