@@ -255,12 +255,91 @@ console.log("arr2 is:",a2)
 
 // Function
 // 41. Write a function to cheack if a number is even or odd.
+function evenOdd(value){
+    if(value%2 === 0){
+        console.log(value+" is even");
+    } 
+    else{
+        console.log("Odd")
+    } 
+}
+evenOdd(23)
+
 // 42. Create a function to calculate the area of a circle with a given radius.
+function area(r){
+    return Math.round(Math.PI * r * r);
+}
+console.log(area(4))
+
 // 43. Write a function that accepts an array and returns the sum of it's element.
+
+
+function sumofarray(arr){
+    var sum = 0
+    arr.forEach(function(e){
+        sum = sum + e
+    })
+    return sum;
+}
+console.log(sumofarray([1,2,3,4,5,6,7,8,9,10]))
+
 // 44. Create a function that checks if a string starts with a specific charecters.
+function checker(str,char){
+    return str.toLowerCase().startsWith(char.toLowerCase());
+}
+console.log(checker("Pratik",'p'))
+
 // 45. Write a function to find maximum of two numbers. 
+ function max(a,b){
+    if(a>b){
+        return a
+    }else if(a<b){
+        return b
+    }else return "equals"
+ }
+console.log(max(10,2))
+
 // 46. Create a function that takes a number and returns it's factorial.
+function getfact(num){
+    let fact = 1
+    for(var i = 1; i<=num; i++){
+        fact *= i
+    }
+    return fact;
+}
+console.log(getfact(5))
+
+
 // 47. Wrte a function that accepts a string and returns it's reverse.
+function abcd(num){
+    return num.split("").reverse().join('')
+}
+console.log(abcd("Pratik"))
+
 // 48. Create a function to find a largest numbers in array.
-// 49. 
-// 50.  
+function abcd(arr){
+    var max = 0
+    for(var i = 1; i<=arr.length; i++){
+        if(arr[i]>arr[max]){
+            max = i 
+        }
+    }
+    return arr[max];
+}
+console.log(abcd([1,22,13,44,15,6]))
+
+
+// 49. Write a function that converts string to kebab-case (eg., "Hello World" -> "Hello-World").
+function kabab(str){
+    // return str.split(' ').join('-')
+    return str.replaceAll(" ","-")
+}
+console.log(kabab("hey kaise ho"))
+
+// 50. Create a function that logs "Hello, World" every time it is called.
+function printing(){
+    console.log("Hello World");
+}
+printing()
+printing()
+printing()
