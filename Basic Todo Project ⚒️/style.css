@@ -69,10 +69,10 @@ li{
     display: flex;
     justify-content: space-between;
 }
-/* .complete{
+h4.complete{
     text-decoration: line-through;
     color: #777;
-} */
+}
 li .delete{
     height: 5%;
     padding: 3px 4px;
