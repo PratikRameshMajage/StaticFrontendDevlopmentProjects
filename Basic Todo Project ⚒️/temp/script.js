@@ -52,7 +52,7 @@ function saveTasks() {
             completed: li.classList.contains("completed")
         });
     });
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+    localStorage.setItem("tasks", json.stringify(tasks));
 }
 
 // Load tasks from local storage
