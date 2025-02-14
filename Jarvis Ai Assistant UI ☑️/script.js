@@ -1,5 +1,13 @@
 micLogo = document.querySelector("#mic-logo");
 content = document.querySelector("#content");
+request = document.querySelector("#request")
+
+request.addEventListener("keypress", function(event){
+    if(event.key === "Enter"){
+        micClick()
+        wishMe()
+    }
+})
 
 micLogo.addEventListener("click",function(){
     micClick()
