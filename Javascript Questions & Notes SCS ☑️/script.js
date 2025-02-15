@@ -1,4 +1,4 @@
-// Basic Console Usage:
+ // Basic Console Usage:
 // 1. Log your name and favourite hobby to the console.
 console.log("Pratik","Coading...")
 
