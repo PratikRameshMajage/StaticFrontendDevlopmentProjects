@@ -1258,3 +1258,173 @@ toggleButton.addEventListener("click", function() {
 Copy and paste the code into your **HTML, CSS, and JavaScript** files, then test the button!  
 
 Let me know if you have any doubts. When you're ready, say **"continue"**, and we’ll move to the next module: **Advanced Selectors & Pseudo-elements**! 🎯🔥
+
+
+You're doing great! Let's move on to the next advanced CSS module. 🚀  
+
+---
+
+# **📌 Module 3: Advanced CSS Selectors & Pseudo-Elements**
+Selectors and pseudo-elements allow you to **target specific elements efficiently** and **style parts of an element without modifying HTML**.
+
+---
+
+## **🔹 3.1 Advanced CSS Selectors**
+CSS offers powerful selectors to target elements based on attributes, relationships, or state.
+
+### **🔹 1️⃣ Attribute Selectors**
+Target elements based on their attributes.
+
+```css
+/* Selects all input elements with type="text" */
+input[type="text"] {
+  border: 2px solid blue;
+}
+
+/* Selects all links that open in a new tab */
+a[target="_blank"] {
+  color: red;
+}
+
+/* Selects all elements with a data attribute */
+[data-theme="dark"] {
+  background-color: black;
+  color: white;
+}
+```
+✅ **Why Use?**  
+✔ Style elements without adding extra classes.  
+✔ Great for **forms, links, and custom attributes**.
+
+---
+
+### **🔹 2️⃣ Child & Sibling Selectors**
+Selectors to style elements based on **relationships**.
+
+```css
+/* Direct child selector (Only direct children of .parent) */
+.parent > p {
+  color: green;
+}
+
+/* General sibling selector (All siblings after .title) */
+.title ~ p {
+  font-style: italic;
+}
+
+/* Adjacent sibling selector (Only first paragraph after .title) */
+.title + p {
+  font-weight: bold;
+}
+```
+✅ **Why Use?**  
+✔ Target **specific elements** without extra classes.  
+✔ Helps in **complex UI layouts**.
+
+---
+
+### **🔹 3️⃣ :nth-child & :nth-of-type**
+Style elements based on their position.
+
+```css
+/* Selects every even row */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Selects the third paragraph */
+p:nth-of-type(3) {
+  color: blue;
+}
+```
+✅ **Why Use?**  
+✔ Useful for **tables, lists, and layouts**.  
+
+---
+
+### **🔹 4️⃣ :not() Selector**
+Excludes specific elements from styling.
+
+```css
+/* Select all buttons except the danger button */
+button:not(.danger) {
+  background-color: green;
+}
+```
+✅ **Why Use?**  
+✔ Avoid styling specific elements without adding extra classes.
+
+---
+
+## **🔹 3.2 Pseudo-Elements**
+Pseudo-elements let you style **parts of an element**.
+
+### **🔹 1️⃣ ::before and ::after**
+These allow you to **insert content** before or after an element.
+
+```css
+/* Adds an icon before a heading */
+h1::before {
+  content: "🔥 ";
+}
+
+/* Adds text after a button */
+button::after {
+  content: " ➜";
+}
+```
+✅ **Why Use?**  
+✔ Adds **icons, decorations, animations** without modifying HTML.
+
+---
+
+### **🔹 2️⃣ ::first-letter and ::first-line**
+Style the **first letter** or **first line** of text.
+
+```css
+/* Make first letter bigger */
+p::first-letter {
+  font-size: 2em;
+  color: red;
+}
+
+/* Style only the first line */
+p::first-line {
+  font-weight: bold;
+}
+```
+✅ **Why Use?**  
+✔ Great for **blog styling, magazines, and typography effects**.
+
+---
+
+### **🔹 3️⃣ Selection Styling (::selection)**
+Customize how text looks when selected.
+
+```css
+::selection {
+  background: yellow;
+  color: black;
+}
+```
+✅ **Why Use?**  
+✔ Improves **UX for readers**.
+
+---
+
+## **🚀 Summary & Best Practices**
+✅ Use **attribute selectors** to style elements dynamically.  
+✅ Use **child & sibling selectors** for efficient targeting.  
+✅ Use **pseudo-elements** to insert content without HTML changes.  
+✅ Use `::selection` to improve **text selection experience**.
+
+---
+
+## **🎯 Hands-on Task for You!**
+1️⃣ Use `::before` to add an emoji before all `h2` headings.  
+2️⃣ Use `:nth-child(odd)` to style every odd row in a table.  
+3️⃣ Try the `::selection` selector to change the selection color.  
+
+---
+
+Let me know if you need any clarification! When you're ready, say **"continue"**, and we’ll move to the next module: **CSS Grid Layout**! 🚀🔥
