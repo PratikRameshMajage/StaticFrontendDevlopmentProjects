@@ -1428,3 +1428,153 @@ Customize how text looks when selected.
 ---
 
 Let me know if you need any clarification! When you're ready, say **"continue"**, and we’ll move to the next module: **CSS Grid Layout**! 🚀🔥
+
+Great! Now, let’s dive into **CSS Grid Layout**, one of the most powerful layout systems in modern CSS. 🚀  
+
+---
+
+# **📌 Module 4: CSS Grid Layout (Advanced Grid System)**
+CSS Grid allows you to create **complex, responsive layouts** with **precise control** over rows and columns.
+
+---
+
+## **🔹 4.1 Basics of CSS Grid**
+To use CSS Grid, set `display: grid` on a container.
+
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 200px;
+  grid-template-rows: 150px 100px;
+}
+```
+✅ **What Happens?**  
+- Creates a **2-column grid** (`100px` and `200px`).  
+- Creates a **2-row grid** (`150px` and `100px`).  
+
+---
+
+## **🔹 4.2 Defining Columns & Rows**
+### **🔹 1️⃣ Using `fr` (Fractional Unit)**
+The `fr` unit distributes space proportionally.
+
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+```
+✅ **What Happens?**  
+- The second column is **twice as wide** as the first and third.
+
+---
+
+### **🔹 2️⃣ Auto-Sizing Columns & Rows**
+Use `auto` to size columns **based on content**.
+
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px auto 100px;
+}
+```
+✅ **What Happens?**  
+- The **middle column expands** based on content.  
+
+---
+
+### **🔹 3️⃣ Repeat Function (`repeat()`)**
+Simplifies **repeating columns or rows**.
+
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+```
+✅ **What Happens?**  
+- Creates **3 equal columns**.
+
+---
+
+## **🔹 4.3 Placing Items in Grid**
+### **🔹 1️⃣ Positioning with `grid-column` & `grid-row`**
+Manually position items in the grid.
+
+```css
+.item {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+```
+✅ **What Happens?**  
+- The item **spans from column 1 to 3** and **row 1 to 2**.
+
+---
+
+### **🔹 2️⃣ Grid Area Naming (`grid-template-areas`)**
+Define grid layouts with **named areas**.
+
+```css
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 80px auto 60px;
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+```
+✅ **What Happens?**  
+- Creates a **structured layout** with named areas.  
+- No need to manually place items.  
+
+---
+
+## **🔹 4.4 Responsive Grid Layout**
+### **🔹 1️⃣ Auto-Fill & Auto-Fit**
+Creates **dynamic, responsive grids**.
+
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+```
+✅ **What Happens?**  
+- Automatically adjusts **columns** based on available space.
+
+---
+
+## **🚀 Summary & Best Practices**
+✅ Use **fr units** to distribute space dynamically.  
+✅ Use **grid-template-areas** for readable layouts.  
+✅ Use **auto-fit/auto-fill** for responsive designs.  
+
+---
+
+## **🎯 Hands-on Task for You!**
+1️⃣ Create a **3x3 grid layout** with **equal columns**.  
+2️⃣ Use `grid-area` to define a **header, sidebar, main, and footer layout**.  
+3️⃣ Make a **responsive grid using `auto-fit`**.  
+
+---
+
+Let me know if you need help! When you're ready, say **"continue"**, and we’ll move to the next module: **CSS Flexbox**! 🚀🔥
