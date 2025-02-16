@@ -15,7 +15,94 @@ html, body{
 }
 /* Basic Regular Syntax */
 .container-Syntax{
+
+    /* 1. Basic Styling */
     color: burlywood;
     background-color: royalblue;
-    
+
+    font-size: 16px;                    /* Font size */
+    font-family: Arial, sans-serif;     /* Font family */
+    font-weight: bold;                  /* Font weight (bold, normal, lighter, etc.) */
+text-align: center;                     /* Align text (left, right, center, justify) */
+
+    /* 2. Box Model */
+    width: 100px;     /* Element width */
+    height: 50px;     /* Element height */
+
+    margin: 10px;     /* Space outside the element */
+    padding: 20px;    /* Space inside the element */
+
+    border: 2px solid black;    /* Border around the element */
+    box-sizing: border-box;       /* Includes padding and border in width/height */
+    border-radius: 20px;
+
+    /* 3. Display & Visibility */
+    display: block;         /* Default for divs, takes full width */
+    display: inline;        /* Sits in a line, no width/height */
+    display: inline-block;  /* Like inline but allows width/height */
+    display: flex;          /* Enables flexbox */
+    display: grid;          /* Enables grid layout */
+    visibility: hidden;     /* Hides the element but keeps space */
+    opacity: 0;             /* Makes element invisible but still clickable */
+
+    /* 4. Positioning */
+    position: static;       /* Default position */
+    position: relative;     /* Positioned relative to itself */
+    position: absolute;     /* Positioned relative to the nearest positioned ancestor */
+    position: fixed;        /* Stays fixed on the screen */
+    position: sticky;       /* Sticks when scrolling */
+    top: 10px; left: 20px;  /* Positioning offsets */
+
+    /* 5. Flexbox (Layout Control) */
+    display: flex;              /* Enables flexbox */
+    justify-content: center;    /* Aligns items horizontally x-axis main-axis*/
+    align-items: center;        /* Aligns items vertically y-axis cross-axis*/
+    flex-direction: row;        /* Row-wise layout */
+    flex-direction: column;     /* Column-wise layout */
+    flex-wrap: wrap;            /* Allows wrapping */
+    gap: 10px;                  /* Space between flex items */
+
+    /* 6. Grid (Advanced Layout) */
+    display: grid;                          /* Enables grid */
+    grid-template-columns: 1fr 1fr 1fr;     /* Defines 3 equal columns */
+    grid-template-rows: auto;               /* Defines rows */
+    grid-gap: 10px;                         /* Space between grid items */
+
+    /* 7. Backgrounds */
+    background-image: url("image.jpg");     /* Set background image */
+    background-size: cover;                 /* Cover the entire area */
+    background-repeat: no-repeat;           /* Prevents repetition */
+    background-position: center;            /* Centers the background */
+
+    /* 8. Transitions & Animations */
+    transition: all 0.5s ease-in-out;       /* Smooth animation */
+    animation: bounce 1s infinite;          /* Applies an animation */
+    @keyframes bounce {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+    }
+
+    /* 9. Shadows & Effects */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);        /* Adds shadow */
+    text-shadow: 2px 2px 5px red;                       /* Adds shadow to text */
+    border-radius: 10px;                                  /* Rounds corners */
+    filter: grayscale(50%);                               /* Applies filter effects */
+
+    /* 10. Hover & Active States */
+    button:hover { background-color: green; }   /* Changes color on hover */
+    button:active { background-color: red; }    /* Changes when clicked */
+    input:focus { border: 2px solid blue; }     /* Changes on input focus */
+
+    /* 11. Responsive Design (Media Queries) */
+    @media (max-width: 768px) {
+        body { background-color: lightgray; }
+    }
+
+    /* 12. Miscellaneous Useful Commands */     
+    cursor: pointer;            /* Changes mouse pointer */
+    overflow: hidden;           /* Hides content overflow */
+    word-wrap: break-word;      /* Breaks long words */
+    z-index: 1000;              /* Controls stack order */
+
 }
