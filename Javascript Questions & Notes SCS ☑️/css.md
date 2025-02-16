@@ -856,3 +856,405 @@ Use **specificity** instead of `!important`.
 
 Let me know if you have any questions, and when you're ready, say **"continue"**, and we’ll move to the next module: **CSS Variables & Custom Properties**! 🚀
 
+You're doing great! Let's move on to the next module. 🚀  
+
+---
+
+# **📌 Module 2: CSS Variables & Custom Properties**
+CSS variables (also called **Custom Properties**) make styles **more flexible, reusable, and dynamic**.  
+
+---
+
+## **🔹 2.1 What Are CSS Variables?**
+CSS variables **store reusable values** (like colors, font sizes, spacing) and can be updated dynamically.  
+
+### **🔹 Example:**
+```css
+:root {
+  --primary-color: #ff5733;
+  --secondary-color: #333;
+  --font-size-large: 20px;
+}
+
+body {
+  color: var(--primary-color);
+  font-size: var(--font-size-large);
+}
+```
+✅ **Why Use CSS Variables?**  
+✔ **Reusability** – Define once, use everywhere  
+✔ **Easier Theming** – Change one variable to update multiple elements  
+✔ **Dynamic Updates** – Change styles without reloading the page  
+
+---
+
+## **🔹 2.2 Declaring and Using Variables**
+### **Declaring Variables**
+Define global variables inside `:root` (recommended for theming).  
+```css
+:root {
+  --main-bg: #f8f8f8;
+  --text-color: #222;
+  --border-radius: 8px;
+}
+```
+✅ **Local Variables (Inside Selectors)**
+```css
+.button {
+  --btn-bg: #007bff;
+  background: var(--btn-bg);
+}
+```
+🔹 **Global variables** are accessible **everywhere**, while **local variables** work **only inside their selector**.
+
+---
+
+## **🔹 2.3 Updating Variables Dynamically**
+### **Changing Variables with CSS (Dark Mode Example)**
+```css
+:root {
+  --bg-color: white;
+  --text-color: black;
+}
+
+[data-theme="dark"] {
+  --bg-color: black;
+  --text-color: white;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+```
+✅ **Why?** This allows **dark mode switching** without needing JavaScript!  
+
+---
+
+## **🔹 2.4 Changing CSS Variables with JavaScript**
+You can **update variables dynamically** using JavaScript.  
+
+### **🔹 Example: Live Theme Switching**
+```html
+<button onclick="changeTheme()">Toggle Theme</button>
+```
+```css
+:root {
+  --primary-color: #ff5733;
+}
+
+body {
+  background: var(--primary-color);
+}
+```
+```js
+function changeTheme() {
+  document.documentElement.style.setProperty('--primary-color', '#333');
+}
+```
+✅ **Why?**  
+✔ **Real-time styling updates**  
+✔ **Better performance than inline styles**  
+
+---
+
+## **🔹 2.5 Fallback Values in CSS Variables**
+If a variable is missing, **provide a fallback value**.  
+
+```css
+.button {
+  background: var(--primary-color, blue); /* Uses 'blue' if variable is undefined */
+}
+```
+
+---
+
+## **🔹 2.6 CSS Variables vs SASS/LESS Variables**
+| Feature | CSS Variables | SASS/LESS Variables |
+|---------|--------------|---------------------|
+| **Dynamic Updates** | ✅ Yes (JavaScript can change values) | ❌ No (Compiled at build time) |
+| **Inheritance** | ✅ Yes (Child elements inherit values) | ❌ No |
+| **Browser Support** | ✅ All modern browsers | ✅ Needs pre-processing |
+| **Best Use Case** | Theming, real-time updates | Pre-defined static styles |
+
+🔹 **Key Takeaway:** Use **CSS Variables** when styles **need to change dynamically**.  
+
+---
+
+## **🔹 2.7 Performance Considerations**
+✅ **Use Fewer Variables for Critical Styles**  
+✅ **Avoid Nested Variables for Simplicity**  
+✅ **Use JavaScript Efficiently to Change Variables**  
+
+---
+
+## **🚀 Summary & Best Practices**
+✅ Define variables in `:root` for global usage  
+✅ Use `var(--variable-name, fallback-value)` for safe styling  
+✅ Update variables dynamically for **themes & user interactions**  
+✅ Use **CSS variables over SASS/LESS for dynamic properties**  
+
+---
+
+## **🎯 Hands-on Task for You!**
+1️⃣ Create a **dark mode toggle** using **CSS variables**.  
+2️⃣ Use **JavaScript** to change a **color variable** dynamically.  
+3️⃣ Experiment with **fallback values**.  
+
+---
+
+When you're ready, say **"continue"**, and we’ll move to the next module: **Advanced Selectors & Pseudo-elements**! 🚀
+
+No worries! Let’s go deeper into **CSS Variables & Custom Properties** with more detailed **explanations and examples**.  
+
+---
+
+# **📌 Understanding CSS Variables & Custom Properties**
+CSS variables allow you to **store values** (like colors, fonts, sizes) **inside a variable** and reuse them throughout your stylesheets.
+
+---
+
+## **🔹 1. Declaring & Using CSS Variables**
+CSS variables are defined using **`--variable-name`** and accessed using **`var(--variable-name)`**.
+
+### **🔹 Example 1: Basic Usage**
+```css
+:root {
+  --main-color: #ff5733;
+  --secondary-color: #222;
+  --font-size: 18px;
+}
+
+body {
+  color: var(--main-color);  /* Uses #ff5733 */
+  font-size: var(--font-size);  /* Uses 18px */
+}
+```
+✅ **What Happens?**  
+- `--main-color` is set to **#ff5733**.  
+- It is applied to the `color` property of `body`.  
+
+**This helps you change all related styles in one place.**  
+
+---
+
+## **🔹 2. Local vs Global Variables**
+CSS variables can be **global** or **local**.
+
+### **🔹 Example 2: Global Variables**
+Defined inside `:root`, which makes them **available everywhere**.
+
+```css
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+```
+
+### **🔹 Example 3: Local Variables**
+Defined inside **a specific selector** and **only available inside that selector**.
+
+```css
+.button {
+  --btn-bg: #007bff;
+  background: var(--btn-bg);
+}
+```
+✅ **What Happens?**  
+- `--btn-bg` exists **only inside `.button`** and cannot be used outside.
+
+---
+
+## **🔹 3. Changing CSS Variables Dynamically**
+We can **update CSS variables in real-time** using CSS or JavaScript.
+
+### **🔹 Example 4: Dark Mode Toggle Using CSS**
+```css
+:root {
+  --bg-color: white;
+  --text-color: black;
+}
+
+[data-theme="dark"] {
+  --bg-color: black;
+  --text-color: white;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+```
+✅ **How It Works?**  
+- By adding `data-theme="dark"` to `html`, we **switch to dark mode**.
+
+### **🔹 Example 5: JavaScript Changing CSS Variables**
+We can **change variables dynamically** using JavaScript.
+
+```html
+<button onclick="changeTheme()">Switch Theme</button>
+```
+
+```css
+:root {
+  --main-bg: white;
+}
+
+body {
+  background: var(--main-bg);
+}
+```
+
+```js
+function changeTheme() {
+  document.documentElement.style.setProperty('--main-bg', 'black');
+}
+```
+✅ **How It Works?**  
+- The JavaScript function **changes `--main-bg` to `black`**, updating the page instantly.
+
+---
+
+## **🔹 4. Fallback Values**
+If a variable is **missing or undefined**, we can provide a **fallback value**.
+
+### **🔹 Example 6: Using Fallback Values**
+```css
+.button {
+  background: var(--btn-color, blue); /* Uses 'blue' if variable is undefined */
+}
+```
+✅ **How It Works?**  
+- If `--btn-color` is not set, it will use `blue`.
+
+---
+
+## **🔹 5. Performance Considerations**
+✅ **Use CSS Variables for Global Theming**  
+✅ **Avoid Overloading CSS with Too Many Variables**  
+✅ **Use JavaScript to Change Variables Efficiently**  
+
+---
+
+## **🚀 Hands-on Task for You!**
+### **🎯 Task 1: Create a Light/Dark Mode Toggle**
+1. Define a variable for **background color** and **text color**.  
+2. Create a **button** to switch themes.  
+3. Use **JavaScript** to change the CSS variable dynamically.  
+
+---
+
+Now, try this yourself, and let me know if you have any questions. When you're ready, say **"continue"**, and we’ll move to the next module: **Advanced Selectors & Pseudo-elements**! 🚀
+
+Sure! Let's create a **Dark Mode Toggle** using **CSS Variables & JavaScript**.  
+
+---
+
+## **🔹 Example: Light/Dark Mode Toggle**
+We will:  
+✅ Use **CSS variables** for colors.  
+✅ Change **CSS variables dynamically** using **JavaScript**.  
+✅ Use a **toggle button** to switch between **light mode** and **dark mode**.  
+
+---
+
+### **1️⃣ HTML Code**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Toggle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dark Mode Toggle Example</h1>
+        <button id="themeToggle">Switch Theme</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+---
+
+### **2️⃣ CSS Code (styles.css)**
+```css
+/* Global CSS Variables */
+:root {
+    --bg-color: white;
+    --text-color: black;
+}
+
+/* Apply CSS Variables */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background: var(--text-color);
+    color: var(--bg-color);
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] {
+    --bg-color: black;
+    --text-color: white;
+}
+```
+
+---
+
+### **3️⃣ JavaScript Code (script.js)**
+```js
+const toggleButton = document.getElementById("themeToggle");
+
+toggleButton.addEventListener("click", function() {
+    // Toggle between light and dark mode
+    if (document.documentElement.getAttribute("data-theme") === "dark") {
+        document.documentElement.removeAttribute("data-theme"); // Set to Light Mode
+    } else {
+        document.documentElement.setAttribute("data-theme", "dark"); // Set to Dark Mode
+    }
+});
+```
+
+---
+
+## **🎯 Explanation**
+✅ We define **CSS variables** inside `:root` to set **default light mode colors**.  
+✅ We define a `[data-theme="dark"]` selector that **changes variables** when dark mode is active.  
+✅ **JavaScript toggles** the `data-theme` attribute when the button is clicked.  
+✅ The UI **instantly updates** because CSS variables are used dynamically.  
+
+---
+
+### **🚀 Try it out!**
+Copy and paste the code into your **HTML, CSS, and JavaScript** files, then test the button!  
+
+Let me know if you have any doubts. When you're ready, say **"continue"**, and we’ll move to the next module: **Advanced Selectors & Pseudo-elements**! 🎯🔥
