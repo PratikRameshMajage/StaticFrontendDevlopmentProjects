@@ -2277,3 +2277,232 @@ You can define **custom layouts** using `grid-template-areas`.
 ---
 
 Let me know if you need any clarification! When you're ready, say **"continue"**, and we’ll move to the next module: **CSS Flexbox**! 🚀🔥
+
+Great! Now, let’s dive into another powerful layout system: **CSS Flexbox**. This module will help you create **responsive, one-dimensional layouts** (either row-based or column-based) efficiently. 🚀  
+
+---
+
+# **📌 Module 9: CSS Flexbox**
+CSS Flexbox (**Flexible Box Layout**) is designed for **one-dimensional layouts** where items are arranged **horizontally (row) or vertically (column)**. It provides **alignment, spacing, and responsiveness** without using floats or positioning.
+
+---
+
+## **🔹 9.1 Flex Container & Flex Items**
+To enable **Flexbox**, set `display: flex` on a container.
+
+```css
+.container {
+  display: flex;
+  background: lightgray;
+}
+
+.item {
+  background: steelblue;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  font-size: 20px;
+}
+```
+
+```html
+<div class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</div>
+```
+✅ **What Happens?**  
+- The items are arranged **horizontally** by default.  
+
+---
+
+## **🔹 9.2 `flex-direction` (Row vs. Column Layout)**
+Defines **how items are placed** inside the container.
+
+```css
+.container {
+  display: flex;
+  flex-direction: row;  /* Default: Left to Right */
+}
+
+.container-column {
+  display: flex;
+  flex-direction: column;  /* Top to Bottom */
+}
+```
+✅ **Key Values:**  
+- `row` (default) → Items in a row  
+- `row-reverse` → Items in reverse row  
+- `column` → Items in a column  
+- `column-reverse` → Items in reverse column  
+
+---
+
+## **🔹 9.3 `justify-content` (Horizontal Alignment)**
+Controls **horizontal alignment** of items.
+
+```css
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+```
+✅ **Key Values:**  
+- `flex-start` → Aligns items to **start** (default)  
+- `flex-end` → Aligns items to **end**  
+- `center` → Centers items  
+- `space-between` → Spaces items **evenly**  
+- `space-around` → Adds **equal space** around each item  
+
+---
+
+## **🔹 9.4 `align-items` (Vertical Alignment)**
+Controls **vertical alignment** of items.
+
+```css
+.container {
+  display: flex;
+  height: 200px;
+  align-items: center;
+}
+```
+✅ **Key Values:**  
+- `stretch` (default) → Items stretch to fill  
+- `flex-start` → Aligns items to **top**  
+- `flex-end` → Aligns items to **bottom**  
+- `center` → Centers items vertically  
+- `baseline` → Aligns items by **text baseline**  
+
+---
+
+## **🔹 9.5 `align-self` (Align Individual Items)**
+Overrides `align-items` for a **specific** item.
+
+```css
+.item:nth-child(2) {
+  align-self: flex-end;
+}
+```
+✅ **What Happens?**  
+- The **second item** moves to the **bottom**.  
+
+---
+
+## **🔹 9.6 `flex-wrap` (Multi-line Wrapping)**
+By default, Flexbox **keeps items in a single line**. Use `flex-wrap` to allow wrapping.
+
+```css
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+```
+✅ **Key Values:**  
+- `nowrap` (default) → No wrapping  
+- `wrap` → Items wrap onto **new lines**  
+- `wrap-reverse` → Wraps in **reverse order**  
+
+---
+
+## **🔹 9.7 `flex-grow`, `flex-shrink`, and `flex-basis`**
+These properties control **how items grow, shrink, and their default size**.
+
+```css
+.item {
+  flex-grow: 1;
+}
+```
+✅ **What Happens?**  
+- Each item **expands** equally.  
+
+```css
+.item {
+  flex-shrink: 2;
+}
+```
+✅ **What Happens?**  
+- Items **shrink** twice as fast as others when space is reduced.  
+
+```css
+.item {
+  flex-basis: 200px;
+}
+```
+✅ **What Happens?**  
+- Items start at **200px width** before growing/shrinking.  
+
+### **Shortcut: `flex: grow shrink basis;`**
+```css
+.item {
+  flex: 1 1 150px; /* flex-grow: 1, flex-shrink: 1, flex-basis: 150px */
+}
+```
+
+---
+
+## **🔹 9.8 `order` (Changing Order of Items)**
+You can **rearrange** items using `order`.
+
+```css
+.item:nth-child(3) {
+  order: -1;
+}
+```
+✅ **What Happens?**  
+- The **third item moves to the first position**.  
+
+---
+
+## **🔹 9.9 Centering with Flexbox (Horizontally & Vertically)**
+```css
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+```
+✅ **What Happens?**  
+- Centers content **both horizontally and vertically**.  
+
+---
+
+## **🔹 9.10 Responsive Flexbox Layout**
+You can create **responsive layouts** using Flexbox.
+
+```css
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item {
+  flex: 1 1 300px; /* Responsive */
+}
+```
+✅ **What Happens?**  
+- Items **adjust** based on screen width.  
+
+---
+
+## **🚀 Summary & Best Practices**
+✅ **Use `flex-direction`** for row/column layouts.  
+✅ **Use `justify-content`** to align **horizontally**.  
+✅ **Use `align-items`** to align **vertically**.  
+✅ **Use `flex-wrap`** for wrapping layouts.  
+✅ **Use `flex-grow`, `flex-shrink`, and `flex-basis`** to **control size**.  
+✅ **Use `order`** to change the position of elements dynamically.  
+
+---
+
+## **🎯 Hands-on Task for You!**
+1️⃣ Create a **flexbox navigation bar** with items spaced evenly.  
+2️⃣ Center a **card** inside a page using `justify-content` and `align-items`.  
+3️⃣ Build a **responsive card layout** that wraps on smaller screens.  
+
+---
+
+Let me know if you need any clarification! When you're ready, say **"continue"**, and we’ll move to the next module: **CSS Animations & Transitions**! 🚀🔥
+
