@@ -1,4 +1,43 @@
 # `Web Technology:` 
 - Fontend
 - ARPANET:
-  - Intial  
+  - Intial Stage of Internet.
+  - Advanced Research Project Agency Network.
+  - 1989 closed
+- Intranet: 
+  - Internet with Close in Organization.
+  - Limited to Organizations. HR.company.com
+  - Private Network
+  - LAN & MAN: Local Area Network & Metropolitian Area Network
+  - Moslty Secured 
+  - Authentication, Authorization Required to Access 
+- Internet:
+  - Net - All is Interconnected
+  - less Secured
+  - Easily Accessible
+  - Access using Vpn(Virtual Private Network)
+- WWW:
+  - World Wide Web
+- URL:
+  - Uniform Resource Locator.
+  - Your Addess on Internet.
+  - Website Address on InInternet. 
+  - Port
+- HTTP: Hyper Text Transfer Protocol:
+  - Internet Protocol (Rules of req & res) 
+  - It is Synchronous way. (TSA) Time Stamp Algorithum
+  - http on url(Port no)
+  - If Req not handle and Res not sent then this situation is called Dead lock.
+- Get Method:
+  - Open Net - Not Secured
+  - Address is Visible
+- Post Method:
+  - Secured 
+  - Address is not Visible
+- Digital Files: Documents : Web Pages:
+  - Each page is Document for Server.
+  - That's why 1s't line of code in html is Document.
+- Html:
+  - Hyper Text Transfer Protocol. 
+  - 1st we need to decide the Structure of web page.
+  - Html is use to define the Structure web page.
