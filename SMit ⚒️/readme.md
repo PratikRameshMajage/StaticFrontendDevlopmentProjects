@@ -78,4 +78,11 @@
   - Tag: <> Angular Brackets
   - head: Context of data on web page.
   - title: Browser web page title | heading.
-  -  
+  - Difference between element and tag.
+  - mixture of element and tag cretares html markup language.
+       - Element:
+         - Without angular brackets.
+         - element specified within tags.
+       - Tag:
+         - With angular brackets.
+         - Tags Hide's Complexity of data.    
