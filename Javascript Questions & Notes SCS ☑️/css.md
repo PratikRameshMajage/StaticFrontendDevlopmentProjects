@@ -2925,3 +2925,223 @@ You can create **grids inside grid items** for more complex layouts.
 Let me know if you have any questions! If you're ready, say **"continue"**, and we’ll move to the next module: **CSS Flexbox**! 🚀🔥
 
 
+# **📌 Module 12: CSS Flexbox (The Flexible Layout System)**  
+CSS **Flexbox** (Flexible Box Layout) is a layout model that allows for **dynamic and flexible layouts** without worrying about positioning or complex floats. It’s designed to distribute space along a **single axis** (horizontal or vertical), and it’s highly useful for creating **responsive, adaptive layouts**. 🚀  
+
+---
+
+## **🔹 12.1 What is Flexbox?**
+Flexbox is used for creating **one-dimensional layouts**. This means it can either work on a **row (horizontal)** or **column (vertical)**, but not both simultaneously. Flexbox is ideal for things like **navbars**, **card layouts**, and **simple grids**.
+
+---
+
+## **🔹 12.2 The Flexbox Container**
+To begin using Flexbox, set the **container**'s display property to `flex`.
+
+```css
+.container {
+  display: flex;
+}
+```
+
+- This makes `.container` a **flex container**.
+- The **direct children** of `.container` will now behave as **flex items**.
+
+---
+
+## **🔹 12.3 Flex Direction (`flex-direction`)**
+Flexbox operates along two axes:
+1. **Main axis**: The axis along which the items are laid out (default: horizontal).
+2. **Cross axis**: Perpendicular to the main axis (default: vertical).
+
+You can change the **direction** of items along the main axis with the `flex-direction` property.
+
+### **💡 Example 1: `flex-direction`**
+```css
+.container {
+  display: flex;
+  flex-direction: row; /* default: horizontal layout */
+}
+
+.container.column {
+  flex-direction: column; /* vertical layout */
+}
+```
+✅ **What Happens?**  
+- By default, items are placed **horizontally**.  
+- If you add `.column` class, items will be placed **vertically**.
+
+---
+
+## **🔹 12.4 Aligning Items on the Main Axis (`justify-content`)**
+The `justify-content` property helps you align items along the **main axis** (either row or column).
+
+| Value       | Description |
+|-------------|-------------|
+| `flex-start`| Aligns items to the start of the container. |
+| `flex-end`  | Aligns items to the end of the container. |
+| `center`    | Aligns items to the center. |
+| `space-between` | Distributes items evenly with no space at the edges. |
+| `space-around`  | Distributes items evenly with space around them. |
+
+### **💡 Example 2: `justify-content`**
+```css
+.container {
+  display: flex;
+  justify-content: space-between; /* Evenly spaces items */
+}
+```
+
+✅ **What Happens?**  
+- Items are spaced **evenly with no space at the edges**.
+
+---
+
+## **🔹 12.5 Aligning Items on the Cross Axis (`align-items`)**
+Aligns items along the **cross axis** (perpendicular to the main axis).
+
+| Value         | Description |
+|---------------|-------------|
+| `flex-start`  | Aligns items to the start of the container (cross axis). |
+| `flex-end`    | Aligns items to the end of the container (cross axis). |
+| `center`      | Aligns items to the center of the cross axis. |
+| `baseline`    | Aligns items to the baseline of their content. |
+| `stretch`     | Stretches items to fill the container (default). |
+
+### **💡 Example 3: `align-items`**
+```css
+.container {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+}
+```
+
+✅ **What Happens?**  
+- Items are aligned **vertically** in the **center**.
+
+---
+
+## **🔹 12.6 Spacing Between Items (`gap`)**
+The `gap` property is a shorthand for creating **spacing between flex items**. It works similar to the `grid-gap` in grid layouts.
+
+### **💡 Example 4: Using `gap`**
+```css
+.container {
+  display: flex;
+  gap: 15px; /* Adds 15px gap between items */
+}
+```
+
+✅ **What Happens?**  
+- Items will have a **15px gap** between them.
+
+---
+
+## **🔹 12.7 Flex Wrap (`flex-wrap`)**
+By default, flex items will try to **fit in a single line**. If they overflow, you can use `flex-wrap` to allow wrapping.
+
+| Value        | Description |
+|--------------|-------------|
+| `nowrap`     | Prevents wrapping (default). |
+| `wrap`       | Allows wrapping onto a new line. |
+| `wrap-reverse` | Wraps in reverse direction. |
+
+### **💡 Example 5: `flex-wrap`**
+```css
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+}
+```
+
+✅ **What Happens?**  
+- Items will **wrap** when the container is not wide enough to fit them on a single line.
+
+---
+
+## **🔹 12.8 Flex Grow, Shrink & Basis**
+Flexbox allows items to **grow** or **shrink** relative to each other.
+
+### **💡 Example 6: Flex Grow, Shrink & Basis**
+```css
+.item {
+  flex-grow: 1; /* Allows the item to grow */
+  flex-shrink: 1; /* Allows the item to shrink */
+  flex-basis: 100px; /* Starts at 100px wide */
+}
+```
+
+| Property     | Description |
+|--------------|-------------|
+| `flex-grow`  | Defines how much an item should **grow** relative to others. |
+| `flex-shrink`| Defines how much an item should **shrink** relative to others. |
+| `flex-basis` | Defines the **initial size** of an item before growing or shrinking. |
+
+### **💡 Example 7: Using `flex-grow`**
+```css
+.container {
+  display: flex;
+}
+
+.item1 {
+  flex-grow: 1;
+  background: lightgreen;
+}
+
+.item2 {
+  flex-grow: 2;
+  background: lightcoral;
+}
+```
+✅ **What Happens?**  
+- `.item2` grows **twice as much** as `.item1` because it has a `flex-grow` value of 2.
+
+---
+
+## **🔹 12.9 Aligning the Container’s Items (`align-content`)**
+The `align-content` property is used when there is **extra space on the cross axis** (i.e., when there are multiple rows or columns). It aligns the **whole set of flex items**.
+
+| Value         | Description |
+|---------------|-------------|
+| `flex-start`  | Aligns rows to the start of the cross axis. |
+| `flex-end`    | Aligns rows to the end of the cross axis. |
+| `center`      | Aligns rows to the center of the cross axis. |
+| `space-between` | Distributes rows evenly with no space at the edges. |
+| `space-around`  | Distributes rows evenly with space around them. |
+| `stretch`     | Stretches rows to fill the container. |
+
+### **💡 Example 8: `align-content`**
+```css
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between; /* Distributes rows evenly */
+}
+```
+
+✅ **What Happens?**  
+- If there are multiple rows, they will be evenly spaced along the **cross axis**.
+
+---
+
+## **🚀 Summary & Best Practices**
+✅ **Use `flex-direction`** to switch between horizontal and vertical layouts.  
+✅ **Use `justify-content`** to control item alignment along the main axis.  
+✅ **Use `align-items`** to control item alignment on the cross axis.  
+✅ **Use `gap`** for spacing between items.  
+✅ **Use `flex-wrap`** to allow items to wrap into new lines when needed.  
+✅ **Use `flex-grow`, `flex-shrink`, and `flex-basis`** to control how items scale.  
+✅ **Use `align-content`** to control space between flex rows or columns.
+
+---
+
+## **🎯 Hands-on Task for You!**
+1️⃣ Create a **navbar** using Flexbox that arranges items **horizontally** and **centers them**.  
+2️⃣ Build a **responsive card layout** where each card grows to fill available space.  
+3️⃣ Create a **flexible gallery layout** with wrapping images.
+
+---
+
+Let me know if you have any questions! If you're ready, say **"continue"**, and we’ll move to the next module: **CSS Variables**! 🚀
+
+
