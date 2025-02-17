@@ -2506,3 +2506,226 @@ You can create **responsive layouts** using Flexbox.
 
 Let me know if you need any clarification! When you're ready, say **"continue"**, and we’ll move to the next module: **CSS Animations & Transitions**! 🚀🔥
 
+Awesome! Now let’s move on to another **powerful and creative module**:  
+
+# **📌 Module 10: CSS Animations & Transitions**  
+CSS **animations** and **transitions** allow you to create smooth effects, making your website more interactive and engaging. 🚀  
+
+---
+
+## **🔹 10.1 CSS Transitions (Smooth Changes)**
+CSS **transitions** allow changes in CSS properties **over time** instead of instantly.  
+
+### **Syntax:**
+```css
+selector {
+  transition: property duration timing-function delay;
+}
+```
+✅ **Key Properties:**  
+- `property` → The CSS property to animate (e.g., `opacity`, `background-color`).  
+- `duration` → Time (e.g., `0.5s`, `1s`).  
+- `timing-function` → Speed curve (`ease`, `linear`, `ease-in`, etc.).  
+- `delay` → Delay before animation starts.  
+
+---
+
+### **💡 Example 1: Button Hover Effect**
+```css
+.button {
+  background: steelblue;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.button:hover {
+  background: royalblue;
+  transform: scale(1.1);
+}
+```
+✅ **What Happens?**  
+- The background color smoothly changes.  
+- The button **scales up** on hover.  
+
+---
+
+### **💡 Example 2: Smooth Opacity Change**
+```css
+.box {
+  width: 100px;
+  height: 100px;
+  background: crimson;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.box:hover {
+  opacity: 0.5;
+}
+```
+✅ **What Happens?**  
+- The box becomes **semi-transparent** when hovered.  
+
+---
+
+## **🔹 10.2 CSS Animations (Keyframe-Based Motion)**
+CSS **animations** allow complex movements using `@keyframes`.  
+
+### **Syntax:**
+```css
+@keyframes animationName {
+  0%   { property: value; }
+  50%  { property: value; }
+  100% { property: value; }
+}
+
+selector {
+  animation: animationName duration timing-function delay iteration-count direction;
+}
+```
+✅ **Key Properties:**  
+- `animation-name` → Name of the animation.  
+- `animation-duration` → Duration (e.g., `2s`).  
+- `animation-timing-function` → Speed curve (`ease`, `linear`, `ease-in-out`).  
+- `animation-delay` → Delay before animation starts.  
+- `animation-iteration-count` → Number of loops (`infinite` for endless).  
+- `animation-direction` → Play **normal**, **reverse**, or **alternate**.  
+
+---
+
+### **💡 Example 3: Bouncing Ball**
+```css
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-50px); }
+  100% { transform: translateY(0); }
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background: orange;
+  border-radius: 50%;
+  position: relative;
+  animation: bounce 1s ease-in-out infinite;
+}
+```
+✅ **What Happens?**  
+- The ball **jumps up and down continuously**.  
+
+---
+
+### **💡 Example 4: Fade In & Out**
+```css
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.text {
+  font-size: 24px;
+  color: darkblue;
+  animation: fadeInOut 3s ease infinite;
+}
+```
+✅ **What Happens?**  
+- The text **fades in and out repeatedly**.  
+
+---
+
+## **🔹 10.3 Animation Timing Functions**
+Defines **speed curves** for smooth animations.
+
+| Value | Effect |
+|--------|--------|
+| `ease` | Starts slow, speeds up, then slows down (default) |
+| `linear` | Constant speed |
+| `ease-in` | Starts slow, then speeds up |
+| `ease-out` | Starts fast, then slows down |
+| `ease-in-out` | Slow start & end, fast in middle |
+| `cubic-bezier(x, y, x2, y2)` | Custom speed control |
+
+### **💡 Example 5: Different Speed Curves**
+```css
+@keyframes move {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(200px); }
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  background: teal;
+  animation: move 2s ease-in-out infinite;
+}
+```
+✅ **What Happens?**  
+- The box moves **smoothly** from left to right.  
+
+---
+
+## **🔹 10.4 Animation Direction**
+Controls **playback direction**.
+
+```css
+@keyframes colorChange {
+  0% { background: red; }
+  100% { background: blue; }
+}
+
+.box {
+  animation: colorChange 3s alternate infinite;
+}
+```
+✅ **What Happens?**  
+- The box **alternates colors** between red and blue.  
+
+---
+
+## **🔹 10.5 Controlling Animations with JavaScript**
+Animations can be **controlled dynamically** using JS.
+
+### **💡 Example 6: Start & Stop Animation**
+```html
+<button onclick="startAnimation()">Start</button>
+<button onclick="stopAnimation()">Stop</button>
+<div class="box"></div>
+
+<script>
+function startAnimation() {
+  document.querySelector('.box').style.animationPlayState = 'running';
+}
+function stopAnimation() {
+  document.querySelector('.box').style.animationPlayState = 'paused';
+}
+</script>
+```
+✅ **What Happens?**  
+- Click **Start** to play the animation.  
+- Click **Stop** to pause the animation.  
+
+---
+
+## **🚀 Summary & Best Practices**
+✅ **Use `transition`** for small hover effects.  
+✅ **Use `@keyframes`** for complex motion animations.  
+✅ **Use `animation-timing-function`** to control speed curves.  
+✅ **Use `animation-direction`** to reverse or loop animations.  
+✅ **Keep animations short (< 3s)** to avoid slowing UI.  
+✅ **Use `animation-play-state`** for JavaScript controls.  
+
+---
+
+## **🎯 Hands-on Task for You!**
+1️⃣ Create a **hover effect** where an image smoothly **zooms in**.  
+2️⃣ Animate a **loading spinner** that rotates continuously.  
+3️⃣ Make a **button bounce** when clicked.  
+
+---
+
+Let me know if you have any questions! If you're ready, say **"continue"**, and we’ll move to the next module: **CSS Grid Layout**! 🚀🔥
+
