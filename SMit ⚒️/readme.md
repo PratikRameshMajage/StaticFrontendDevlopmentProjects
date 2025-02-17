@@ -80,9 +80,13 @@
   - title: Browser web page title | heading.
   - Difference between element and tag.
   - mixture of element and tag cretares html markup language.
-       - Element:
-         - Without angular brackets.
-         - element specified within tags.
-       - Tag:
-         - With angular brackets.
-         - Tags Hide's Complexity of data.    
+    - Element:
+      - Without angular brackets.
+      - element specified within tags.
+    - Tag:
+      - With angular brackets.
+      - Tags Hide's Complexity of data.    
+ - Hyprering: jumping from one document to another document wia a links.
+ - Hide's complexity : Markup language.
+ - Elements Specified within tags.
+ - Web page: Serve on web Internet. Connected with each other. They are all connected with each other.   
