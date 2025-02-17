@@ -37,7 +37,45 @@
 - Digital Files: Documents : Web Pages:
   - Each page is Document for Server.
   - That's why 1s't line of code in html is Document.
-- Html:
+- HTML:
   - Hyper Text Transfer Protocol. 
   - 1st we need to decide the Structure of web page.
   - Html is use to define the Structure web page.
+  - Not aPrograming Language.
+  - It is Markup Language.
+- CSS:  
+  - Cascading Style Sheet
+    - Inline Css
+    - Internal Css
+    - External Css
+- JAVASCRIPT:
+  - Include Logic into the web page.
+- BootStrap:
+  - Framework of Html, Css, Js, Jquery.
+  - BootStrap Classes - Container of Css code
+  - BotStrap Follows International Standards.    
+- Browser:
+  - Browser render's web page.
+  - Every web page is Document.
+  - FTP: File Transfer Protocol
+  - HTTP: TCP|IP: Transfer Control Protocal | Internet Protocol.
+
+```html
+<html></html>
+<head></head>
+<title></title>
+<h1><h2><h3><h4><h5><h6> 
+<center><center>
+<marquee></marquee>  
+<!-- By default flow in left direction -->
+<marquee direcetion="right"></marquee>  
+<marquee direcetion="up"></marquee>  
+<marquee direcetion="down"></marquee>
+<marquee direcetion="right"><marquee direcetion="up"></marquee></marquee>
+<marquee><marquee direcetion="down"></marquee></marquee>  
+```
+- HTML:
+  - Tag: <> Angular Brackets
+  - head: Context of data on web page.
+  - title: Browser web page title | heading.
+  -  
