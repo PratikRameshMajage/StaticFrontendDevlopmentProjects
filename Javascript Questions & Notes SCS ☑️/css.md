@@ -2729,3 +2729,199 @@ function stopAnimation() {
 
 Let me know if you have any questions! If you're ready, say **"continue"**, and we’ll move to the next module: **CSS Grid Layout**! 🚀🔥
 
+# **📌 Module 11: CSS Grid Layout (The Ultimate Layout System)**
+CSS **Grid Layout** is the most powerful layout system in CSS, allowing you to create complex designs with **rows and columns** easily. It’s a **two-dimensional** system, meaning it can handle both **rows and columns simultaneously**. 🚀  
+
+---
+
+## **🔹 11.1 What is CSS Grid?**
+CSS Grid is a layout technique that allows you to define a **grid container** and place elements inside it using rows and columns.
+
+✅ **Advantages of CSS Grid:**
+- Makes complex layouts **easy to build**.
+- Handles both **rows and columns** together.
+- Offers **precise control** over spacing and alignment.
+- Reduces the need for **float, flexbox hacks, and positioning tricks**.
+
+---
+
+## **🔹 11.2 Creating a Grid Container**
+To start using CSS Grid, apply `display: grid;` to a container.
+
+```css
+.container {
+  display: grid;
+}
+```
+
+✅ **Nothing happens yet**—we need to define **rows and columns**.
+
+---
+
+## **🔹 11.3 Defining Columns and Rows**
+We use **`grid-template-columns`** and **`grid-template-rows`** to define the structure.
+
+### **💡 Example 1: Creating a 3-Column Layout**
+```css
+.container {
+  display: grid;
+  grid-template-columns: 200px 200px 200px; /* 3 fixed columns */
+  gap: 10px; /* Space between items */
+}
+
+.item {
+  background: lightblue;
+  padding: 20px;
+  text-align: center;
+}
+```
+
+✅ **What Happens?**  
+- The container is divided into **three equal columns**, each **200px wide**.  
+- A **10px gap** separates the items.
+
+---
+
+## **🔹 11.4 Using the `fr` Unit (Flexible Columns)**
+Instead of fixed widths, we can use **`fr`** (fractional unit) to create a **responsive** grid.
+
+### **💡 Example 2: Flexible Columns**
+```css
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* Middle column is twice as big */
+}
+```
+✅ **What Happens?**  
+- The second column is **twice as wide** as the others.  
+- The grid adapts to the screen size.
+
+---
+
+## **🔹 11.5 Defining Rows**
+Just like columns, we define rows using `grid-template-rows`.
+
+### **💡 Example 3: Defining Rows**
+```css
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 200px; /* First row: 100px, second row: 200px */
+}
+```
+
+✅ **What Happens?**  
+- The **first row is 100px** tall, and the **second row is 200px**.
+
+---
+
+## **🔹 11.6 Placing Items in the Grid**
+We use `grid-column` and `grid-row` to **control where an item appears**.
+
+### **💡 Example 4: Spanning Columns & Rows**
+```css
+.item1 {
+  grid-column: 1 / 3; /* Spans across 2 columns */
+  grid-row: 1 / 2; /* First row */
+}
+```
+✅ **What Happens?**  
+- `.item1` **spans two columns**, making it wider.
+
+---
+
+## **🔹 11.7 `repeat()` for Dynamic Grids**
+The `repeat()` function simplifies defining columns/rows.
+
+### **💡 Example 5: Auto-Responsive Columns**
+```css
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+}
+```
+✅ **What Happens?**  
+- Creates **3 equal columns** without manually writing `1fr 1fr 1fr`.
+
+---
+
+## **🔹 11.8 `auto-fit` vs `auto-fill` for Responsive Grids**
+These properties adjust the number of columns based on available space.
+
+### **💡 Example 6: Auto-Responsive Grid**
+```css
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+```
+✅ **What Happens?**  
+- The grid **automatically adjusts** based on screen size.  
+- Items are **at least 150px wide**, but expand if space is available.
+
+---
+
+## **🔹 11.9 Aligning Items in Grid**
+You can align items horizontally and vertically.
+
+| Property | Description |
+|----------|------------|
+| `justify-items` | Aligns **items** horizontally inside their grid area |
+| `align-items` | Aligns **items** vertically inside their grid area |
+| `justify-content` | Aligns the **whole grid** horizontally |
+| `align-content` | Aligns the **whole grid** vertically |
+
+### **💡 Example 7: Centering Items in the Grid**
+```css
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 300px;
+  justify-items: center;
+  align-items: center;
+}
+```
+✅ **What Happens?**  
+- All items are **centered horizontally and vertically**.
+
+---
+
+## **🔹 11.10 Nested Grids (Grids inside Grids)**
+You can create **grids inside grid items** for more complex layouts.
+
+### **💡 Example 8: Nested Grid**
+```css
+.parent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+```
+✅ **What Happens?**  
+- A **grid inside a grid** is created.  
+
+---
+
+## **🚀 Summary & Best Practices**
+✅ **Use `fr` units** for flexibility instead of fixed `px`.  
+✅ **Use `repeat()`** to avoid manual column definitions.  
+✅ **Use `auto-fit` or `auto-fill`** for responsive layouts.  
+✅ **Use `grid-column` & `grid-row`** to control item placement.  
+✅ **Use alignment properties** to position elements properly.  
+
+---
+
+## **🎯 Hands-on Task for You!**
+1️⃣ Create a **3x3 grid** where the **first item spans two columns**.  
+2️⃣ Build a **responsive grid gallery** using `auto-fit` and `minmax()`.  
+3️⃣ Design a **dashboard layout** using CSS Grid.  
+
+---
+
+Let me know if you have any questions! If you're ready, say **"continue"**, and we’ll move to the next module: **CSS Flexbox**! 🚀🔥
+
+
