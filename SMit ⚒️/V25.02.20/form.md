@@ -3,9 +3,24 @@
     2. It is Declared using Form tag.
     3. <form>
     4. There are different types of inputsl in forms
+    5. Attributes: 
+       1. action: url  
+       2. method 
+          1. get 
+          2. post 
+          3. put  
+          4. delete
 # `Label:`
-    1. It indicates to is to be store or specify.
+    - It indicates to is to be store or specify.
 # `Name Attribute:`
-    1. It helps server to identify each input of the forms.
+    - It helps server to identify each input of the forms.
 # `Placeholder:`
-    1. It works as a guidline.
+    - It works as a guidline.
+# `Checkbox:`
+    - Select multiple options.
+    - multiple input tags use
+# `Radio:`
+    - Select only one option.
+    - multiple input tags use
+# `Dropdown:`
+    - Select and Option two tages use.
