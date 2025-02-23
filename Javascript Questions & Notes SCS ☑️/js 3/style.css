@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    font-family: monument;
+}
+#main{
+    height: 100%;
+    width: 100%;
+}
+h1{
+    padding: 10px;
+    text-align: center;
+}
+#container{
+    width: 80%;
+    height: 80%;
+    background-color: antiquewhite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
