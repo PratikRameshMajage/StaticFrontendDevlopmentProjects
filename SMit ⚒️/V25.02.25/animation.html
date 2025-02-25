@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        #box{
+            height: 300px;
+            width: 200px;
+            border: 2px solid red;
+            color: lightcoral;
+            -webkit-animation: data 10s infinite;
+        }
+        @-webkit-keyframes data
+        {
+            10%{
+                background-color: red;
+            }
+            20%{
+                background-color: blue;
+            }
+            30%{
+                background-color: green;
+            }
+            40%{
+                background-color: lightblue;
+            }
+            50%{
+                background-color: lightcoral;
+            }
+            60%{
+                background-color: lightcyan;
+            }
+            70%{
+                background-color: lightgoldenrodyellow;
+            }
+            80%{
+                background-color: lightgray;
+            }
+            90%{
+                background-color: lightpink;
+            }
+            100%{
+                background-color: lightsalmon;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>
