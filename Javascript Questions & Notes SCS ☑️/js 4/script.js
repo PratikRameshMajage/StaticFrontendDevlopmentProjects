@@ -12,8 +12,8 @@ document.addEventListener("mousemove", function(dets){
     //     left : dets.x,
     //     top : dets.y,
     // })
-    cursor.style.left = dets.x + "px"
-    cursor.style.top = dets.y + "px"
+    // cursor.style.left = dets.x + "px"
+    // cursor.style.top = dets.y + "px"
     // console.log(dets.clientX, dets.clientY)
 })
 
