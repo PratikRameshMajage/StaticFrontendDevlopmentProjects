@@ -201,9 +201,40 @@ V25.02.17
   - delete a.name. delete the Object Properties.
   - Variable-Properties-key:value, and value-functions-Methods. A property whichvalue is function.  
   - To Store the information of one Entity.
-- `Execution Context:` 
-  - Imaginary Container.
-  - Contain 3 Things:
-    - Variables.
-    - Functions.
-    - `Lexical Environment:` Scope of Variable and Function.
+- `Function:`
+  - Function is block of code which executes targeted logic.
+  - Function is declared by function followed by function_Name.
+  - A function logic executes when the function is called.
+  - Processor jump and executes the Imediate block of code.
+  - Reusability: Write Once and executes Multiple Times.
+  - There are two types of Functions:
+    - `Predefined:`
+      - Predefined are renderimate Functions.
+    - `User-Defined:`
+      - userdefined are created by Programmers | Coders. 
+    - `Syntax:` function function_name(){ //logic } = function defination function_name() = Function Call
+    - `Parametrise Function:` 
+      - Parameters = Function Defination and Arguments = Function Call.
+    - `Non-Parametrise Function:`
+    - `Return function:`
+      - Function only return once.
+  - `Execution Context:` 
+    - Imaginary Container.
+    - Contain 3 Things:
+      - Variables.
+      - Functions.
+      - `Lexical Environment:` Scope of Variable and Function.
+- `Arithmatic Operators:`
+  - Addition & Concatination
+  - Subtraction
+  - Multiplication
+  - Division
+  - Modulo
+- `Loops:`
+  - Iteration and Parsing:
+  - For Loop = For Control loop Statements.
+  - While Loop = For infinite loop Condition's
+  - Do-while Loop = Not Mostly use in devlopment
+  - for of = String
+  - for in = Object
+  - forEach = Array
