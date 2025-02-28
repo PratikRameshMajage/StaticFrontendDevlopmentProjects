@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameter</title>
+</head>
+<body>
+    <script>
+        // Addition
+        function Add(a, b, c){ // Parameters
+            document.write("block1")
+            return a+b+c; // Implicit Return Function
+        }
+
+
+
+        // It Call the Nearest Function
+        function Add(a,b){
+            document.write("<br>block2")
+            return a+b;
+
+        } 
+
+
+        var res1 = Add(1,1) // Arguments
+        var res2 = Add(5,5,5)
+
+
+        document.write("<br>Addition is: ", res1)
+        document.write("<br>Addition is: ", res2) 
+
+
+
+        // GadBad...!
+        function Calci(){
+            var p = 10
+            var q = 20
+            var sum = p + q;
+            // var sub = q - p;
+
+            return sum;
+            // return sub;
+        }
+        var res = Calci()
+        document.write(res)
+
+
+    </script>
+</body>
+</html>
