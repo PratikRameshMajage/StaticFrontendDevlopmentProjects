@@ -127,6 +127,7 @@ V25.02.17
 - There is Defference between Type Casting and Parsing.
 - Parsing: Convert String into number. JavaScript.
 - Type Cast: Convert any value into any other data type. Just it can not applicable with String. Java.
+- `Context api` - `window` | `Stack` | `Heap`    
 - `Popup's:`
   - `Worning:` 
     - alert() - ok
@@ -142,16 +143,17 @@ V25.02.17
     - var, let, const 
     - `Var:`
       - var allow Create's two duplicate variables.
-      - Function Scope.
       - Es5
-      - var add itself in window object.
+      - Function Scope.
+      - var add itself in window object. Expose your Data.
       - allow to update variable.
       - var is used to declare Variables.
+      - var apne parent fun me kahi bhi use ho sakta hai.
     - `let:`  
       - let not allow to Create two duplicate variables.
-      - Braces Scope.
       - Es6
-      - let not add itself in window object.
+      - Braces Scope.
+      - let don't add itself in window object.
       - allow to update variable.
       - let is used to declare Variables.
     - `Const:`
@@ -162,34 +164,46 @@ V25.02.17
       - const is used to declare Constant Variables
 - `Data Types:` 
   - typeof() function is use to check data type of variable.  
-  - number: 37, 9.7;
-  - string: "", "Pratik";
-  - undefined: var a;
-  - boolean: 
-    - Truthy: 1, true, except falsy values;
-    - Falsy: 0, NaN, null, document, false; 
-  - BigInt and Symbol
-  - object: (Object:object)
-  - Array Consider as object in javascript. var a = { 0:11, 1:22, 2:33, 3:44, 4:55,   -1:104 }
-  - NaN: var a = Par2345;
-  - null
-  - not defined: variable a is not exist. 
+  - Primitives and Reference:
+  - `Primitives:` Real value Copy
+    - number: 37, 9.7;
+    - string: "", "Pratik";
+    - undefined: var a;
+    - boolean: 
+      - Truthy: 1, true, except falsy values;
+      - Falsy: 0, NaN, null, document, false; 
+    - BigInt and Symbol
+    - object: (Object:object)
+    - Array Consider as object in javascript. var a = { 0:11, 1:22, 2:33, 3:44, 4:55,   -1:104 }
+    - NaN: var a = Par2345;
+    - null
+    - not defined: variable a is not exist. 
+  - `Reference:` Reference value copy.
+  - [] = Array
+  - () = Functions
+  - {} = Object`
 - `Array:`
   - Declare using [].
   - var a = [11,22,33,44,55]. This is Array.
   - Access using [] & index value. a[0], a[1]
+  - To Store Multiple Elements.
   - `Methods:`
-    - push: Enter Last Element.
+    - push: Add extra element in Last.
     - pop: Delete Last Element. 
     - shift: Delete First Element.
-    - unshift: Enter First Element.
-    - slice:
-    - splice:
+    - unshift: Add Element in First.
+    - slice: use in pythn.
+    - splice: splice(2,1) Delete using index value. 
 - `Object:`
   - Declare using {}.
   - var a = {name : "Pratik", age:22}. This is Object.
   - Access using dot Operator. a.name, a.age  
   - delete a.name. delete the Object Properties.
-  - Variable-Properties-key:value, and value-functions-Methods. 
-
-
+  - Variable-Properties-key:value, and value-functions-Methods. A property whichvalue is function.  
+  - To Store the information of one Entity.
+- `Execution Context:` 
+  - Imaginary Container.
+  - Contain 3 Things:
+    - Variables.
+    - Functions.
+    - `Lexical Environment:` Scope of Variable and Function.
