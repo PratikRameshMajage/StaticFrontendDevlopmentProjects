@@ -1,0 +1,70 @@
+function validation(){
+    let error = document.getElementById("error")
+
+    let yourName = document.getElementById("yourName").value
+    let yourNamePattern = /^[a-zA-Z]{3,20}$/
+
+    let userName = document.getElementById("userName").value
+    let userNamePattern = /^[a-zA-Z0-9]{3,20}$/
+
+    let mail = document.getElementById("mail").value
+    let mailPattern = /^[a-zA-Z0-9_#$%]+\@[a-zA-Z0-9]+\.([a-z]{2,4})$/
+
+    let pass = document.getElementById("pass").value
+    let passPattern = /^[a-zA-Z0-9]{6,10}$/
+
+    let conPass = document.getElementById("conPass").value
+
+
+    if(yourName == ""){
+        error.textContent = "Enter Your Name..!"
+        return false;
+    }
+    else if(!yourName.match(yourNamePattern)){
+        error.textContent = "Enter Valid Name..!"
+        return false;
+    }
+    else if(userName == ""){
+        error.textContent = "Enter User Name..!"
+        return false;
+    }
+    else if(!userName.match(userNamePattern)){
+        error.textContent = "Enter Valid User Name..!"
+        return false;
+    }
+    else if(mail == ""){
+        error.textContent = "Enter Mail..!"
+        return false;
+    }
+    else if(!mail.match(mailPattern)){
+        error.textContent = "Enter Valid Mail..!"
+        return false;
+    }
+    else if(pass == ""){
+        error.textContent = "Enter Password..!"
+        return false;
+    }
+    else if(!pass.match(passPattern)){
+        error.textContent = "Enter Valid Password..!"
+        return false;
+    }
+    else if(conPass !== pass){
+        error.textContent = "Password not Matching..!"
+        return false;
+    }
+    else if((document.validationForm.gender[0].checked == false) && (document.validationForm.gender[1].checked == false)){
+        error.textContent = "Select Your Gender..!"
+        return false;
+    }
+    else if(document.validationForm.age.selectedIndex == 0){
+        error.textContent = "Select Your Age Range..!"
+        return false;
+    }
+    else if(document.validationForm.terms.checked == false){
+        error.textContent = "Select Terms and Conditions..!"
+        return false;
+    }
+    else{
+        error.textContent = ""
+    }
+}

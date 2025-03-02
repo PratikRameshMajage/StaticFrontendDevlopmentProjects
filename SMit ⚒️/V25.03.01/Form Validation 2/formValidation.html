@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <form onsubmit="return validation()" id="formValidation" name="validationForm" action="" method="" >
+            <h1 id="heading">Form Validation:</h1>
+            <label for="yourName">Enter Your Name:</label>
+            <input type="text" name="yourName" id="yourName">
+            <br>
+            <label for="userName">Enter User Name:</label>
+            <input type="text" name="userName" id="userName">
+            <br>
+            <label for="mail">Enter Email:</label>
+            <input type="text" name="mail" id="mail">
+            <br>
+            <label for="pass">Enter Password:</label>
+            <input type="password" name="pass" id="pass">
+            <br>
+            <label for="conPass">Enter Confirm Password:</label>
+            <input type="password" name="conPass" id="conPass">
+            <br>
+            <label for="gender">Enter Gender:</label>
+            <div id="genderMF">
+                <h4>Male</h4><input type="radio" name="gender" >
+                <h4>Female</h4><input type="radio" name="gender" >
+            </div>
+            <br>    
+            <div id="ages">
+                <label>Enter Age:</label>
+                <select name="" id="age">
+                    <option value="">Select</option>
+                    <option value="">0-10</option>
+                    <option value="">10-20</option>
+                    <option value="">20-30</option>
+                    <option value="">0-40</option>
+                </select>
+            </div>
+            <br>
+            <div id="labelterms">
+                <label for="terms">Agree Terms and Conditions:</label>
+                <input type="checkbox" name="terms" id="terms">
+            </div>
+            <input id="submit" type="submit" value="Submit">
+            <div id="error"></div>
+            <script src="script.js"></script>
+        </form>
+    </div>
+</body>
+</html>

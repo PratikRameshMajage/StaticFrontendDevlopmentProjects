@@ -1,0 +1,206 @@
+<HTML>
+
+<HEAD>
+	<TITLE> New Document </TITLE>
+
+	<style>
+		body {
+			background-color: lightblue;
+		}
+
+		i {
+			color: red;
+			font-size: 20;
+			font-family: bold;
+		}
+
+		b {
+			color: red;
+			font-size: 35;
+		}
+	</style>
+
+	<script>
+		function validation() {
+			var x = document.getElementById("fname").value;
+			var str = /^[A-Za-z]{3,20}$/;
+			var x1 = document.getElementById("user_name").value;
+			var str1 = /^[A-Za-z0-9_#$%]{3,20}$/;
+			var x2 = document.getElementById("pw").value;
+			var x3 = document.getElementById("pw1").value;
+			var str2 = /^[a-zA-Z0-9]{6,10}$/;
+			var x4 = document.getElementById("email").value;
+			var str3 = /^[A-Za-z0-9._]+\@[a-zA-Z0-9]+\.([a-z]{2,4})$/;
+
+			if (x == "") {
+				document.getElementById("err1").innerHTML = "Plz Enter Your Name";
+				return false;
+			}
+
+			if (!x.match(str)) {
+				document.getElementById("err1").innerHTML = "It should contain only letters from a-z or A-Z and atlest 2 or atmost 20 characters";
+				return false;
+			}
+			else {
+
+				document.getElementById("err1").innerHTML = "";
+			}
+
+			if (x1 == "") {
+				document.getElementById("err2").innerHTML = "Plz Enter User Name";
+				return false;
+			}
+
+			if (!x1.match(str1)) {
+				document.getElementById("err2").innerHTML = "It should contain only letters from a-z or A-Z and atlest 2 or atmost 20 characters";
+				return false;
+			}
+			else {
+
+				document.getElementById("err2").innerHTML = "";
+			}
+
+
+			if (x2 == "") {
+				document.getElementById("err3").innerHTML = "Plz Enter Password";
+				return false;
+			}
+
+			if (!x2.match(str2)) {
+				document.getElementById("err3").innerHTML = "Your Password should contain letters from a-z or A-Z or digits 0-9 and it should contain atleast six characters";
+				return false;
+			}
+			else {
+
+				document.getElementById("err3").innerHTML = "";
+			}
+
+
+			if (x3 != x2) {
+				document.getElementById("err4").innerHTML = "Password is not matching";
+				return false;
+			}
+			else {
+
+				document.getElementById("err4").innerHTML = "";
+			}
+
+			if (x4 == "") {
+				document.getElementById("err5").innerHTML = "Plz enter e-mail address";
+				return false;
+			}
+			else {
+
+				document.getElementById("err5").innerHTML = "";
+			}
+
+			if (!x4.match(str3)) {
+				document.getElementById("err5").innerHTML = "It should be like this sumeet37.deve@gmail.com";
+				return false;
+			}
+			else {
+				document.getElementById("err5").innerHTML = "";
+			}
+
+			if ((document.contact_form.gender[0].checked == false) && (document.contact_form.gender[1].checked == false)) {
+				document.getElementById("err6").innerHTML = "Plz select your gender";
+				return false;
+			}
+			else {
+				document.getElementById("err6").innerHTML = "";
+			}
+
+			if (document.contact_form.age.selectedIndex == 0) {
+				document.getElementById("err7").innerHTML = "Plz select your age group";
+				return false;
+			}
+			else {
+				document.getElementById("err7").innerHTML = "";
+			}
+
+			if (document.contact_form.terms.checked == false) {
+				document.getElementById("err8").innerHTML = "Plz check above checkbox otherwise you will not be able to create new user account";
+				return false;
+			}
+			else {
+				document.getElementById("err8").innerHTML = "";
+			}
+		}
+	</script>
+</HEAD>
+
+<BODY>
+	<table>
+		<form name="contact_form" method="post" onsubmit="return validation()">
+			<b> Account Registration Form: </b><br /><br />
+			<tr>
+				<td>Your Name:</td>
+				<td><input type="text" name="contact_name" id="fname"><br>
+					<i id="err1"></i>
+				</td>
+			</tr>
+			<tr>
+				<td>User Name: </td>
+				<td><input type="text" name="user_name" id="user_name"></br>
+					<i id="err2"></i>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Enter Password: </td>
+				<td><input type="password" name="password1" id="pw" /><br>
+					<i id="err3"></i>
+				</td>
+			</tr>
+			<tr>
+
+				<td> Confirm Password: </td>
+				<td><input type="password" name="password2" id="pw1" /><br />
+					<i id="err4"></i>
+				</td>
+			</tr>
+			<tr>
+				<td>E_mail Address:</td>
+				<td><input type="text" name="email" id="email" />
+					<i id="err5"></i><br />
+				</td>
+			</tr>
+			<tr>
+
+				<td>Gender:</td>
+				<td>Male<input type="radio" name="gender" /></td>
+				<td>Female<input type="radio" name="gender" /><br>
+					<i id="err6"></i>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Age: </td>
+				<td><select name="age">
+						<option value="select" selected="selected">Select</option>
+						<option>0-10</option>
+						<option>10-20</option>
+						<option>20-30</option>
+						<option>30-40</option>
+					</select>
+					<i id="err7"></i>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					Agree to terms and conditions: </td>
+				<td><input type="checkbox" name="terms" />
+					<i id="err8"></i>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<input type="submit" value="Done!" />
+				</td>
+			</tr>
+		</form>
+</BODY>
+
+</HTML>
