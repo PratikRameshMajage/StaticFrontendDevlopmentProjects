@@ -1,3 +1,5 @@
+var main = document.querySelector("#main");
+
 function validation(){
     let error = document.getElementById("error")
 
@@ -68,3 +70,18 @@ function validation(){
         error.textContent = ""
     }
 }
+
+const images = [
+    "https://images.unsplash.com/photo-1702632586803-c6b31cfb49e8?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1702632586744-c6b4f448e220?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1702632586838-32761c24ccee?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+]
+
+let currentIndex = 0;
+
+function changeImage(){
+    main.style.backgroundImage = `url(${images[currentIndex]})`
+    currentIndex = (currentIndex + 1) % images.length;
+}
+changeImage()
+setInterval(changeImage,3000)

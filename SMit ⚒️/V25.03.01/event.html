@@ -7,11 +7,17 @@
 </head>
 <body>
 
-    <input type="submit" value="submit" onclick="Data()">
+    <input type="submit" value="submit" id="input1">
+    <!-- <input type="submit" value="submit" onclick="Data()"> -->
     <script>
-        function Data(){
-            document.write("Executed...")
-        }
+
+        document.querySelector("#input1").addEventListener("click", function(){
+            // document.write("Executed...")
+            document.querySelector("body").textContent = "Executed..."
+        })
+        // function Data(){
+        //     document.write("Executed...")
+        // }
     </script>
 </body>
 </html>

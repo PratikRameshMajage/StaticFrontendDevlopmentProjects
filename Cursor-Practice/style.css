@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+}
+#main{
+    height: 100%;
+    width: 100%;
+}
+#cursor{
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    transition: all linear 0.2s;
+}
