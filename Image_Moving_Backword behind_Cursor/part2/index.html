@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageMoovingBackwordBehindTheCursor</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: monospace;
+            scroll-behavior: smooth;
+            overflow: hidden;
+        }
+        *::selection{
+            background-color: #fff;
+            color: #000;
+        }
+        html, body{
+            height: 100%;
+            width: 100%;
+            background-color: #000;
+            color: #fff;
+        }
+        #main{
+            height: 100%;
+            width: 100%;
+            padding: 0vw 3vw;
+        }
+        #heading{
+            height: 8vw;
+            font-size: 3.5vw;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid#fff;
+        }
+        .elem{
+            padding: 3vw 1.5vw;
+            border-bottom: 2px solid #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .elem>h2{
+            font-size: 2vw;
+        }
+        .elem>h4{
+            font-size: 1.5vw;
+        }
+        .elem img{
+            position: absolute;
+            /* left: 20%; */
+            width: 10vw;
+            height: 10vw;
+            border-radius: 20px;
+            object-fit: cover;
+            object-position: center;
+            transition: all linear 0.2s;
+            transform: translate(-50%, 0%);
+            opacity: 0;
+        }
+        /* .elem:hover img{
+            opacity: 1;
+            left: 60%;
+        } */
+        /* .elem:nth-last-child(1){
+            border-bottom: none;
+        } */
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="heading">
+            updates
+        </div>
+        <div id="container">
+            <div id="elems">
+                <div class="elem">
+                    <img src="https://images.unsplash.com/photo-1676439777335-f4206f1f4216?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <h2>Men's Wear</h2>
+                    <h4>This is Hero Time</h4>
+                </div>
+                <div class="elem">
+                    <img src="https://images.unsplash.com/photo-1696393381892-82d97481b5ed?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <h2>Men's Wear</h2>
+                    <h4>This is Hero Time</h4>
+                </div>
+                <div class="elem">
+                    <img src="https://images.unsplash.com/photo-1677563232020-d4f43e36f1be?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <h2>Men's Wear</h2>
+                    <h4>This is Hero Time</h4>
+                </div>
+                <div class="elem">
+                    <img src="https://images.unsplash.com/photo-1719263063220-584b1f4172a2?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <h2>Men's Wear</h2>
+                    <h4>This is Hero Time</h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var elem = document.querySelectorAll(".elem")
+        var img = document.querySelectorAll("img")
+        elem.forEach(function(e){
+            e.addEventListener("mouseenter", (dets)=>{
+                e.childNodes[1].style.opacity = 1;
+            })
+            e.addEventListener("mouseleave", (dets)=>{
+                e.childNodes[1].style.opacity = 0;
+            })
+            e.addEventListener("mousemove", (dets)=>{
+                e.childNodes[1].style.left = dets.clientX + "px";
+                // e.childNodes[1].style.top = dets.clientY + "px";
+            })
+        })
+        // elems.addEventListener("mouseenter", function(){
+        //     img.style.left = "60%"; 
+        // })
+        // elems.addEventListener("mouseleave", function(){
+        //     img.style.left = "20%"; 
+        // })
+
+        // elem.forEach(function(e){
+        //     e.addEventListener("mouseenter", function(){
+        //         img.style.left = "60%"; 
+        //     })
+        //     e.addEventListener("mouseleave", function(){
+        //         img.style.left = "20%"; 
+        //     })
+        // })
+    </script>
+</body>
+</html>

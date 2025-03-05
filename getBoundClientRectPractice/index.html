@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice mousemove</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body{
+            height: 100%;
+            width: 100%;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        #main{
+            height: 50%;
+            width: 50%;
+            background-color: palegreen;
+            word-break: break-all;
+            position: relative;
+        }
+        #circle{
+            width: 5px;
+            height: 5px;
+            padding: 10px;
+            border-radius: 50px;
+            position: absolute;
+            left: 0%;
+            top: 0%;
+            transform: translate(-50%, -50%);
+            background-color: darkblue;
+            transition: all linear 0.2s;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="circle">
+
+        </div>
+    </div>
+    <script>
+        let main = document.querySelector("#main");
+        let circle = document.querySelector("#circle");
+        main.addEventListener("mousemove", (dets)=>{
+            circle.style.left = dets.clientX - main.getBoundingClientRect().x + "px";
+            circle.style.top =  dets.clientY - main.getBoundingClientRect().y + "px";
+        })
+    </script>
+</body>
+</html>
