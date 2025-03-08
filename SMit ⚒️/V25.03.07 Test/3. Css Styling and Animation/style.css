@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: monospace;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1vw;
+}
+#box1{
+    height: 40%;
+    width: 20%;
+    background-color: palegoldenrod;
+    box-shadow: 5px 5px 5px #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 2px #fff;
+    flex-direction: column;
+    padding: 1vw;
+    gap: 1vw;
+    word-wrap: break-word;
+    -webkit-animation: anime 3s infinite;
+    transition:  scale 0.2s ease-in-out;
+    scale: 1;
+}
+#box1:hover{
+    scale: 1.08;
+}
+#box2{
+    height: 40%;
+    width: 20%;
+    background-color: palegoldenrod;
+    box-shadow: 5px 5px 5px #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 2px #fff;
+    flex-direction: column;
+    padding: 1vw;
+    gap: 1vw;
+    word-wrap: break-word;
+    -webkit-animation: anime 3s infinite;
+    transition: scale 0.2s ease-in-out;
+    scale: 1;
+}
+#box2:hover{
+    scale: 1.08;
+}
+#box3{
+    height: 40%;
+    width: 20%;
+    background-color: palegoldenrod;
+    box-shadow: 5px 5px 5px #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 2px #fff;
+    box-shadow: ;
+    flex-direction: column;
+    padding: 1vw;
+    gap: 1vw;
+    word-wrap: break-word;
+    -webkit-animation: anime 3s infinite;
+    transition: scale 0.2s ease-in-out;
+    scale: 1;
+}
+#box3:hover{
+    scale: 1.08;
+}
+@-webkit-keyframes anime {
+    50%{
+        background-color: palegoldenrod;
+    }
+    100%{
+        background-color: lightgrey;
+    }
+}

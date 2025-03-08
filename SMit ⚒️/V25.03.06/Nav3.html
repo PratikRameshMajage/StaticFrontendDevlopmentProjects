@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Dominoz</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+
+                    <!-- Veg Pizza Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="vegPizzaDropdown" role="button" data-toggle="dropdown">
+                            Veg Pizza
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Paneer Pizza</a>
+                            <a class="dropdown-item" href="#">Capsicum Pizza</a>
+                            <a class="dropdown-item" href="#">Chili Pizza</a>
+                        </div>
+                    </li>
+
+                    <!-- Non-Veg Pizza Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="nonVegPizzaDropdown" role="button" data-toggle="dropdown">
+                            Non-Veg Pizza
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Chicken Pizza</a>
+                            <a class="dropdown-item" href="#">Egg Pizza</a>
+                            <a class="dropdown-item" href="#">Chicken Grilled Pizza</a>
+                            <a class="dropdown-item" href="#">BBQ Pizza</a>
+                        </div>
+                    </li>
+
+                    <!-- Chill Drinks Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="chillDrinksDropdown" role="button" data-toggle="dropdown">
+                            Chill Drinks
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="Nav1.html">Sprite</a>
+                            <a class="dropdown-item" href="#">Frooti</a>
+                            <a class="dropdown-item" href="#">Blueberry</a>
+                            <a class="dropdown-item" href="#">Maaza</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Using Javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <form action="" method="" name="formValidation" onsubmit="return validation()">
+            <h1>Form Validation</h1>
+            <label for="fname">Enter First Name: </label>
+            <input type="text" name="fname" id="fname">
+
+            <label for="lname">Enter Last Name: </label>
+            <input type="text" name="lname" id="lname">
+
+            <label for="pass">Enter Password: </label>
+            <input type="password" name="pass" id="pass">
+
+            <label for="conPass">Enter Conform Password: </label>
+            <input type="password" name="conPass" id="conPass">
+
+            <label for="course">Enter Your Course: </label>
+            <select name="" id="course">
+                <option value="">course</option>
+                <option value="">Computer</option>
+                <option value="">IT</option>
+                <option value="">E&Tc</option>
+                <option value="">Electronic</option>
+            </select>
+            <input type="submit" value="submit" id="submit">
+            <div id="error"></div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
